@@ -1,0 +1,37 @@
+:is([class^="scroller_"], [class*="scrollerBase_"]) {
+  &::-webkit-scrollbar {
+    min-width: 16px;
+    width: 16px;
+  }
+
+  &::-webkit-scrollbar-track {
+    visibility: visible !important;
+    background-color: var(--ThreeDFace) !important;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-button:single-button {
+    visibility: visible !important;
+    border-radius: 0 !important;
+    background: var(--ThreeDFace) !important;
+    box-shadow: var(--WindowFrame);
+    border: none !important;
+  }
+
+  &::-webkit-scrollbar-button:single-button {
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+  }
+
+  &::-webkit-scrollbar-button:single-button:active {
+    box-shadow: inset 1px 1px var(--ThreeDShadow),
+      inset -1px -1px var(--ThreeDShadow) !important;
+  }
+  &::-webkit-scrollbar-button:single-button:vertical:increment {
+  }
+  &::-webkit-scrollbar-button:single-button:vertical:decrement {
+  }
+}

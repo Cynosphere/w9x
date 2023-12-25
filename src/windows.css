@@ -1,0 +1,104 @@
+.platform-win {
+  #app-mount {
+    background-color: var(--ThreeDFace) !important;
+    box-shadow: var(--WindowFrame);
+    padding: 4px;
+    width: calc(100vw - 8px);
+    height: calc(100vh - 8px);
+
+    [class^="typeWindows_"] {
+      margin-top: 0 !important;
+      border-bottom: 1px solid var(--ThreeDFace);
+      background: linear-gradient(
+        to right,
+        var(--InactiveTitleStart),
+        var(--InactiveTitleEnd)
+      ) !important;
+
+      [class^="wordmarkWindows_"] {
+        width: 16px !important;
+        height: 16px !important;
+        top: 1px !important;
+        left: 2px !important;
+        padding: 0 !important;
+        background-image: none;
+        background-repeat: no-repeat;
+        &::after {
+          font-family: var(--font-primary) !important;
+          font-size: 8pt !important;
+          color: var(--InactiveTitleText) !important;
+          font-weight: bold !important;
+          content: "Discord";
+          position: absolute;
+          top: 7px;
+          left: 20px;
+          height: 17px;
+          opacity: 1;
+        }
+        & > svg {
+          display: none;
+        }
+      }
+
+      [class*="winButton_"] {
+        top: 2px;
+        width: 12px !important;
+        height: 10px !important;
+        padding: 2px;
+        background: var(--ThreeDFace) !important;
+        box-shadow: var(--OuterEdge);
+
+        &:active {
+          box-shadow: var(--InnerEdge);
+        }
+
+        & > svg {
+          display: none;
+        }
+
+        &::before {
+          width: 12px !important;
+          height: 10px !important;
+          background-color: var(--WindowText);
+          content: "";
+        }
+      }
+      [class^="winButtonClose_"] {
+        right: 2px;
+      }
+      [class^="winButtonMinMax_"]:nth-child(3),
+      [class^="winButtonMinMax_"]:nth-child(4) {
+        right: 4px;
+      }
+
+      [class^="winButtonClose_"]::before {
+        -webkit-mask-image: var(--ImageClose);
+        mask-image: var(--ImageClose);
+      }
+      [class^="winButtonMinMax_"]:nth-child(3)::before {
+        -webkit-mask-image: var(--ImageMaximize);
+        mask-image: var(--ImageMaximize);
+      }
+      [class^="winButtonMinMax_"]:nth-child(4)::before {
+        -webkit-mask-image: var(--ImageMinimize);
+        mask-image: var(--ImageMinimize);
+      }
+    }
+  }
+
+  &.app-focused #app-mount [class^="typeWindows_"] {
+    background: linear-gradient(
+      to right,
+      var(--ActiveTitleStart),
+      var(--ActiveTitleEnd)
+    ) !important;
+
+    [class^="wordmarkWindows_"]::after {
+      color: var(--ActiveTitleText) !important;
+    }
+  }
+
+  [class^="app_"] [class^="app_"] [class^="bg_"] {
+    top: -19px !important;
+  }
+}

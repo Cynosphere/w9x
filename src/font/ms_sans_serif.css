@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "px_sans_serif";
+  src: url("https://c7.pm/fonts/sserife.woff") format("woff");
+  src: url("https://c7.pm/fonts/sserife.woff") format("woff2");
+  src: url("https://c7.pm/fonts/sserife.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "px_sans_serif";
+  src: url("https://c7.pm/fonts/sserife-bold.woff") format("woff");
+  src: url("https://c7.pm/fonts/sserife-bold.woff") format("woff2");
+  src: url("https://c7.pm/fonts/sserife-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --font-display: "px_sans_serif" !important;
+  --font-primary: "px_sans_serif" !important;
+  --font-headline: "px_sans_serif" !important;
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Font",
+  "optionNames": {
+    "ms_sans_serif": {
+      "name": "MS Sans Serif",
+      "default": true
+    }
+  }
+}

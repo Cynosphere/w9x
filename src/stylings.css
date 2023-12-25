@@ -1,0 +1,14 @@
+:root {
+  --WindowFrame: inset -1px -1px 0 0 var(--ThreeDDarkShadow),
+    inset 1px 1px 0 0 var(--ThreeDLightShadow),
+    inset -2px -2px 0 0 var(--ThreeDShadow),
+    inset 2px 2px 0 0 var(--ThreeDHighlight);
+  --OuterEdge: inset -1px -1px 0 0 var(--ThreeDDarkShadow),
+    inset 1px 1px 0 0 var(--ThreeDHighlight),
+    inset -2px -2px 0 0 var(--ThreeDShadow),
+    inset 2px 2px 0 0 var(--ThreeDLightShadow);
+  --InnerEdge: inset -1px -1px 0 0 var(--ThreeDHighlight),
+    inset 1px 1px 0 0 var(--ThreeDShadow),
+    inset -2px -2px 0 0 var(--ThreeDLightShadow),
+    inset 2px 2px 0 0 var(--ThreeDDarkShadow);
+}
