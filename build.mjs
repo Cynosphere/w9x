@@ -57,6 +57,7 @@ async function generateHeader() {
 
 async function generateSections() {
   const out = {
+    configNames: [],
     configurable: [],
     static: [],
   };
@@ -83,6 +84,7 @@ async function generateSections() {
       // Just in case
       if (!meta) continue;
 
+      out.configNames.push(file.name);
       const lines = [`@var select ${file.name} '${meta.name}' {`];
 
       if (meta.optional) {
@@ -136,7 +138,11 @@ const header = await generateHeader();
 const sections = await generateSections();
 const footer = "==/UserStyle== */";
 
-const documentSection = "@-moz-document domain(discord.com) {\n";
+const documentStart = "@-moz-document domain(discord.com) {\n";
+
+const configSection = `/* {{{ UserStyle replacements */\n${sections.configNames
+  .map((name) => `/*[[${name}]]*/`)
+  .join("\n")}\n/* }}} */\n\n`;
 
 const final =
   header +
@@ -144,7 +150,8 @@ const final =
   "\n" +
   footer +
   "\n\n" +
-  documentSection +
+  documentStart +
+  configSection +
   sections.static.join("\n\n") +
   "\n}\n";
 

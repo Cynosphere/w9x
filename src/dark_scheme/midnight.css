@@ -1,0 +1,15 @@
+.theme-dark {
+  --ThreeDLightShadow: #3b3b3b;
+  --ThreeDHighlight: #585858;
+  --ThreeDFace: #3b3b3b;
+  --ThreeDShadow: #252525;
+  --ThreeDDarkShadow: #000000;
+  --Window: #252525;
+  --WindowText: #ffffff;
+  --ActiveTitleStart: #000000;
+  --ActiveTitleEnd: #000000;
+  --ActiveTitleText: #ffffff;
+  --InactiveTitleStart: #252525;
+  --InactiveTitleEnd: #252525;
+  --InactiveTitleText: #585858;
+}

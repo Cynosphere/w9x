@@ -1,0 +1,9 @@
+{
+  "name": "Dark Scheme",
+  "optionNames": {
+    "midnight": {
+      "default": true,
+      "name": "Midnight (Aseprite 95)"
+    }
+  }
+}
