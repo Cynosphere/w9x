@@ -1,0 +1,15 @@
+.theme-light {
+  --ThreeDLightShadow: #d4d0c8;
+  --ThreeDHighlight: #ffffff;
+  --ThreeDFace: #d4d0c8;
+  --ThreeDShadow: #808080;
+  --ThreeDDarkShadow: #404040;
+  --Window: #ffffff;
+  --WindowText: #000000;
+  --ActiveTitleStart: #0a246a;
+  --ActiveTitleEnd: #a6caf0;
+  --ActiveTitleText: #ffffff;
+  --InactiveTitleStart: #808080;
+  --InactiveTitleEnd: #c0c0c0;
+  --InactiveTitleText: #d4d0c8;
+}

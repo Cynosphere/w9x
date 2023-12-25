@@ -1,0 +1,8 @@
+{
+  "name": "w9x",
+  "description": "Customizable Discord theme based on the style of Windows Classic theme",
+  "author": "Cynosphere",
+  "namespace": "w9x.c7.pm",
+  "url": "https://github.com/Cynosphere/w9x",
+  "license": "CC0"
+}

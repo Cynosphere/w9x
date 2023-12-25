@@ -1,0 +1,11 @@
+{
+  "name": "Light Scheme",
+  "optionNames": {
+    "standard": {
+      "name": "Windows Standard",
+      "default": true
+    },
+    "classic": "Windows Classic",
+    "95": "Windows 95"
+  }
+}
