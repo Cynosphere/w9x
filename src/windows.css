@@ -25,7 +25,7 @@
         background-repeat: no-repeat;
         &::after {
           font-family: var(--font-primary) !important;
-          font-size: 8pt !important;
+          font-size: var(--FontSize) !important;
           color: var(--InactiveTitleText) !important;
           font-weight: bold !important;
           content: "Discord";

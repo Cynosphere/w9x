@@ -21,17 +21,25 @@
     border: none !important;
   }
 
-  &::-webkit-scrollbar-button:single-button {
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-  }
-
   &::-webkit-scrollbar-button:single-button:active {
     box-shadow: inset 1px 1px var(--ThreeDShadow),
       inset -1px -1px var(--ThreeDShadow) !important;
   }
-  &::-webkit-scrollbar-button:single-button:vertical:increment {
-  }
-  &::-webkit-scrollbar-button:single-button:vertical:decrement {
-  }
+}
+
+:is(
+    [class^="scroller_"],
+    [class*="scrollerBase_"]
+  )::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-image: var(--ImageScrollbarUp) !important;
+}
+:is(
+    [class^="scroller_"],
+    [class*="scrollerBase_"]
+  )::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-image: var(--ImageScrollbarDown) !important;
 }

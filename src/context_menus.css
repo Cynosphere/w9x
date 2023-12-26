@@ -1,0 +1,166 @@
+[class*="menu_"] {
+  padding: 2px;
+  border-radius: 0 !important;
+  padding: 2px;
+  box-shadow: var(--WindowFrame) !important;
+  background-color: var(--ThreeDFace) !important;
+
+  & > [class^="scroller_"] {
+    padding: 1px !important;
+    margin-right: -4px;
+
+    [class^="customItem_"][id^="message-quickreact_"] > [class^="button_"] {
+      border-radius: 0 !important;
+    }
+
+    [class^="separator_"] {
+      margin: 4px 1px;
+      border-bottom: 1px solid var(--ThreeDHighlight);
+      border-top: 1px solid var(--ThreeDShadow);
+    }
+    [class^="item_"] {
+      border-radius: 0 !important;
+      margin: 1px 0;
+      padding: 0 2px !important;
+      min-height: 16px !important;
+      font-size: var(--FontSize);
+      color: var(--WindowText);
+
+      &:hover,
+      &[class*="focused_"] {
+        background-color: var(--Selection);
+        color: var(--SelectionText);
+
+        &[aria-haspopup="true"] > [class^="iconContainer_"]::before,
+        &[role="menuitemcheckbox"][aria-checked="true"]
+          > [class^="iconContainer_"]::before,
+        &[role="menuitemradio"][aria-checked="true"]
+          > [class^="iconContainer_"]::before {
+          background-color: var(--SelectionText);
+        }
+      }
+
+      &:not(:has(> [class^="iconContainer_"] > [class^="icon_"])):not(
+          :has(> [class^="iconContainerLeft_"])
+        ) {
+        padding-inline-start: 20px !important;
+      }
+      &:has(> [class^="iconContainer_"] > [class^="icon_"]) {
+        flex-direction: row-reverse;
+      }
+
+      & > [class^="iconContainer_"]:has(> [class^="icon_"]),
+      & > [class^="iconContainerLeft_"] {
+        margin-left: 0;
+        margin-right: 2px;
+      }
+
+      & > [class^="label_"] {
+        padding-left: 2px;
+
+        & > [class^="subtext_"] {
+          line-height: 12px;
+          margin-top: 0;
+        }
+      }
+
+      & > [class^="iconContainer_"],
+      & > [class^="iconContainer_"] > svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      & > [class^="hintContainer_"] {
+        margin-right: 18px;
+      }
+
+      &[aria-haspopup="true"] > [class^="iconContainer_"] > [class^="caret_"] {
+        display: none;
+      }
+      &[aria-haspopup="true"] > [class^="iconContainer_"]::before {
+        content: "";
+        position: absolute;
+        right: -2px;
+        top: 0px;
+        width: 16px;
+        height: 16px;
+        background-color: var(--WindowText);
+        mask-image: var(--ImageMenuArrow);
+        -webkit-mask-image: var(--ImageMenuArrow);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+      }
+
+      &[role="menuitemcheckbox"]
+        > [class^="iconContainer_"]
+        > svg[class^="icon_"] {
+        display: none;
+      }
+      &[role="menuitemcheckbox"][aria-checked="true"]
+        > [class^="iconContainer_"]::before {
+        content: "";
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 16px;
+        height: 16px;
+        background-color: var(--WindowText);
+        mask-image: var(--ImageMenuCheck);
+        -webkit-mask-image: var(--ImageMenuCheck);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+      }
+
+      &[role="menuitemradio"]
+        > [class^="iconContainer_"]
+        > svg[class^="icon_"] {
+        display: none;
+      }
+      &[role="menuitemradio"][aria-checked="true"]
+        > [class^="iconContainer_"]::before {
+        content: "";
+        position: absolute;
+        right: -1px;
+        top: 0px;
+        width: 16px;
+        height: 16px;
+        background-color: var(--WindowText);
+        mask-image: var(--ImageMenuRadio);
+        -webkit-mask-image: var(--ImageMenuRadio);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+      }
+
+      & > [class^="label_"] > [class^="roleRow_"] > [class^="roleCircle_"] {
+        width: 12px;
+        height: 12px;
+        border-radius: 0;
+        border-top: 1px solid var(--WindowText);
+        border-left: 1px solid var(--WindowText);
+        margin: 0;
+        margin-right: 2px;
+      }
+    }
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-button,
+    &::-webkit-scrollbar-button:single-button,
+    &::-webkit-scrollbar-track {
+      visibility: hidden !important;
+      width: 4px !important;
+      min-width: 4px !important;
+    }
+  }
+}
+
+[class^="submenuPaddingContainer_"] {
+  padding: 0;
+  margin: -4px;
+}
