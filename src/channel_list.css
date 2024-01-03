@@ -1,0 +1,71 @@
+[class^="base_"] > [class^="content_"] > [class^="sidebar_"] {
+  border-radius: 0 !important;
+  border-left: 4px solid var(--Window);
+
+  & > [class^="container_"] {
+    padding: 2px;
+    box-shadow: var(--RebarBorder);
+    background: var(--Window) !important;
+
+    & > [class^="container_"][class*="clickable_"] {
+      & > header[class^="header_"] {
+        padding: 0px;
+        padding-bottom: 2px;
+        height: 22px !important;
+        box-shadow: var(--RebarBottom);
+
+        & > [class^="headerContent_"] {
+          height: 20px !important;
+          padding-left: 6px;
+          & > [class*="name_"] {
+            font-weight: normal;
+            font-size: var(--FontSize);
+          }
+        }
+      }
+      & > [class^="animatedContainer_"] {
+        height: 20px !important;
+        & > [class^="bannerImage_"] {
+          height: 20px !important;
+          &::after {
+            content: "";
+            height: 20px !important;
+            width: 240px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: linear-gradient(
+              0deg,
+              var(--background-secondary) 5%,
+              transparent 100%
+            );
+          }
+        }
+      }
+    }
+
+    & > [class^="scroller_"] {
+      padding: 2px;
+      box-shadow: var(--InnerEdge);
+
+      & > ul {
+        & > [style="height: 84px;"],
+        & > [style="height: 12px;"] {
+          display: none;
+        }
+      }
+
+      &::-webkit-scrollbar-track {
+        margin-right: 2px;
+      }
+      &::-webkit-scrollbar-button:single-button:vertical:decrement {
+        margin-right: 2px;
+        margin-top: 2px;
+      }
+      &::-webkit-scrollbar-button:single-button:vertical:increment {
+        margin-right: 2px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+}

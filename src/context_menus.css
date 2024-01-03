@@ -42,6 +42,8 @@
 
       &:not(:has(> [class^="iconContainer_"] > [class^="icon_"])):not(
           :has(> [class^="iconContainerLeft_"])
+        ):not(:has(> [class^="statusItem_"])):not(
+          :has([class^="userMenuItem_"])
         ) {
         padding-inline-start: 20px !important;
       }
@@ -71,7 +73,15 @@
       }
 
       & > [class^="hintContainer_"] {
-        margin-right: 18px;
+        &:not(:has(> #edit-custom-status)) {
+          margin-right: 18px;
+        }
+
+        & > #edit-custom-status > svg {
+          padding: 1px;
+          height: 16px !important;
+          width: 16px !important;
+        }
       }
 
       &[aria-haspopup="true"] > [class^="iconContainer_"] > [class^="caret_"] {
@@ -146,6 +156,50 @@
         margin: 0;
         margin-right: 2px;
       }
+
+      & > [class^="statusItem_"] {
+        padding: 0;
+        grid-template-rows: 18px 1fr;
+        grid-template-columns: 18px 1fr;
+        min-height: 18px !important;
+
+        & > svg {
+          padding: 4px;
+        }
+
+        & > [class^="description_"] {
+          display: none;
+        }
+      }
+
+      [class^="userMenuItem_"] {
+        & > [class^="wrapper_"] {
+          padding: 1px;
+          height: 16px !important;
+          width: 16px !important;
+
+          & > svg {
+            height: 16px !important;
+            width: 16px !important;
+          }
+        }
+
+        & > [class^="userMenuUsername_"] {
+          margin-left: 2px;
+          margin-right: 0;
+
+          & > [class*="userMenuText_"],
+          & > [class*="userMenuDiscriminator_"] {
+            font-size: var(--FontSize);
+          }
+        }
+
+        & > [class^="activeIcon_"] {
+          padding: 1px;
+          height: 16px !important;
+          width: 16px !important;
+        }
+      }
     }
 
     &::-webkit-scrollbar,
@@ -163,4 +217,36 @@
 [class^="submenuPaddingContainer_"] {
   padding: 0;
   margin: -4px;
+}
+
+[class^="accountProfilePopoutWrapper_"] {
+  left: unset;
+
+  [class^="userPopoutOuter_"] {
+    padding: 0 !important;
+    border-radius: 0;
+    width: unset;
+
+    [class^="userPopoutInner_"] {
+      border-radius: 0;
+
+      &::before,
+      & > [class^="bannerSVGWrapper_"],
+      & > [class*="avatarWrapper_"],
+      & > [class^="profileBadges_"] {
+        display: none;
+      }
+
+      & > [class^="userPopoutOverlayBackground_"] {
+        border-radius: 0;
+        margin: 0;
+
+        & > [class^="section_"],
+        & > [class^="divider_"],
+        & > [class^="scroller_"] {
+          display: none;
+        }
+      }
+    }
+  }
 }

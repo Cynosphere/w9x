@@ -4,6 +4,7 @@
     "ms_sans_serif": {
       "name": "MS Sans Serif",
       "default": true
-    }
+    },
+    "terminus": "Terminus"
   }
 }

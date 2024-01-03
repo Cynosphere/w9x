@@ -1,0 +1,179 @@
+[class*="guilds_"] {
+  background-color: var(--Window) !important;
+  box-shadow: var(--RebarBorder);
+  width: 28px;
+  padding: 2px;
+  overflow: visible;
+
+  [class^="scroller_"] {
+    overflow: visible !important;
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-button,
+    &::-webkit-scrollbar-button:single-button,
+    &::-webkit-scrollbar-track {
+      visibility: hidden !important;
+      width: 0px !important;
+      min-width: 0px !important;
+    }
+  }
+
+  [class^="listItemWrapper_"] > [class^="wrapper_"] {
+    width: 24px;
+    height: 24px;
+    & > svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  [class^="listItem_"] {
+    --custom-list-items-list-item-width: 28px;
+    margin: 0 !important;
+
+    [class^="pill_"] {
+      height: 24px;
+      [class^="item_"] {
+        &:not([style*="height: 8px;"]) {
+          display: none;
+        }
+      }
+    }
+
+    [class*="selected_"] > [class^="wrapper_"]:has(> svg) {
+      box-shadow: inset -1px -1px 0 0 var(--ThreeDHighlight),
+        inset 1px 1px 0 0 var(--ThreeDShadow);
+    }
+
+    [class^="wrapper_"]:has(> svg) {
+      width: 24px;
+      height: 24px;
+      & > svg {
+        width: 24px;
+        height: 24px;
+
+        img[class^="icon_"] {
+          width: 32px;
+          height: 32px;
+        }
+
+        [class^="folder_"] {
+          background-color: transparent;
+          [class^="folderIconWrapper_"] {
+            width: 32px;
+            height: 32px;
+            margin: 8px;
+
+            mask-image: var(--ImageFolderClosed);
+            -webkit-mask-image: var(--ImageFolderClosed);
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-mode: luminance;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+
+            [class^="closedFolderIconWrapper_"] {
+              display: none;
+            }
+
+            [class^="expandedFolderIconWrapper_"] {
+              width: unset;
+              height: unset;
+              & > svg {
+                width: 32px;
+                height: 32px;
+
+                background-color: currentColor;
+
+                mask-image: var(--ImageFolderOpen);
+                -webkit-mask-image: var(--ImageFolderOpen);
+                mask-repeat: no-repeat;
+                mask-position: center;
+                mask-mode: luminance;
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-position: center;
+
+                & > path {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+        [class^="childWrapper_"] {
+          background-color: transparent;
+        }
+      }
+
+      &:hover {
+        box-shadow: inset -1px -1px 0 0 var(--ThreeDShadow),
+          inset 1px 1px 0 0 var(--ThreeDHighlight);
+      }
+    }
+    [class^="wrapperSimple_"] {
+      width: 24px;
+      height: 24px;
+      & > svg {
+        width: 24px;
+        height: 24px;
+
+        img[class^="icon_"] {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+
+  ul[id^="folder-items-"] {
+    height: unset !important;
+    width: auto;
+    position: absolute;
+    z-index: 20;
+    top: 0px;
+    left: 28px;
+    box-shadow: var(--WindowFrame);
+    background-color: var(--Window);
+    padding: 4px;
+
+    [class^="listItem_"] {
+      --custom-list-items-list-item-width: unset !important;
+      height: 18px;
+
+      [class^="blobContainer_"] {
+        display: flex;
+        &::after {
+          font-family: var(--font-primary);
+          font-size: var(--FontSize);
+          color: var(--WindowText);
+          content: attr(data-dnd-name);
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          display: inline-flex;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  [class^="wrapper_"]:has(> [class^="expandedFolderBackground_"]) {
+    width: unset !important;
+    overflow: visible;
+  }
+
+  [class^="expandedFolderBackground_"] {
+    background-color: transparent;
+    width: unset;
+
+    & + [class^="listItem_"] {
+      /*&::after {
+        content: "";
+        height: 13px;
+        width: 24px;
+        left: 0;
+        bottom: 0;
+      }*/
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[class^="layerContainer_"] > [class*="layer_"] > [class^="tooltip_"] {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: 1px solid var(--TooltipText);
+  background-color: var(--Tooltip);
+  border-radius: 0;
+  color: var(--TooltipText);
+
+  [class^="tooltipContent_"] {
+    padding: 2px 4px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  [class^="tooltipPointer_"] {
+    display: none;
+  }
+
+  [class*="rowGuildName_"] {
+    align-items: center;
+  }
+}

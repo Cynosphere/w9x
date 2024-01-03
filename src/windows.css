@@ -18,20 +18,20 @@
       [class^="wordmarkWindows_"] {
         width: 16px !important;
         height: 16px !important;
-        top: 1px !important;
-        left: 2px !important;
+        top: 5px !important;
+        left: 6px !important;
         padding: 0 !important;
-        background-image: none;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACYSURBVDhPpZABDsAgCAN5uk/zZ45OahAnmqxJowi9OWVRKW2yyHDpdSILQQxTtVYCNpAQxnBUDtEGBgZEh1B7HQH+BnoyAbA/AjAwVgN4I7wHQGiaCWHoHKYwRHcxdBH+Lf91dbx+/gtoqiEf9uJD6nSA4FD9PpwFY5j6hrgwB3ZaASjMbGYAaIa4MFYCUGdeAMP9apeW9gDxfcZs7l81ZQAAAABJRU5ErkJggg==");
         background-repeat: no-repeat;
         &::after {
           font-family: var(--font-primary) !important;
-          font-size: var(--FontSize) !important;
+          font-size: var(--FontSize, 12pxc) !important;
           color: var(--InactiveTitleText) !important;
           font-weight: bold !important;
           content: "Discord";
           position: absolute;
-          top: 7px;
-          left: 20px;
+          top: var(--TitlebarOffset, 3px);
+          left: 18px;
           height: 17px;
           opacity: 1;
         }

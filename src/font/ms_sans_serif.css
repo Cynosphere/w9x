@@ -19,5 +19,7 @@
   --font-display: "px_sans_serif" !important;
   --font-primary: "px_sans_serif" !important;
   --font-headline: "px_sans_serif" !important;
+
   --FontSize: 8pt;
+  --TitlebarOffset: 3px;
 }

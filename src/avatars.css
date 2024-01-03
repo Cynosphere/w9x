@@ -1,0 +1,87 @@
+[class*="avatar_"],
+[class*="avatar_"] [class*="image_"],
+[class*="callAvatar_"],
+[class*="callAvatar_"] [class*="speaking_"],
+[class*="avatarDefault_"],
+[class*="avatarSpeaking_"],
+[class*="avatar_"] [class*="inner_"],
+[class*="callAvatarVoice_"],
+[class*="callAvatarWrapper_"] [class*="speaking_"],
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  [class^="message_"]
+  [class*="header_"]
+  [class*="avatar_"]
+  [class*="large_"],
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  [class^="message_"]
+  [class*="header_"]
+  [class*="avatar_"]
+  [class*="wrapper_"],
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  [class^="message_"]
+  [class*="contents_"]
+  [class*="avatar_"],
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  [class^="wrapper_"]
+  [class*="contents_"]
+  [class*="avatar_"],
+[class^="messageGroupCozy_"] [class*="contents_"] [class*="avatar_"],
+[class*="autocomplete_"]
+  [class*="autocompleteInner_"]
+  [class*="autocompleteRow_"]
+  [class*="content_"]
+  [class*="wrapper_"],
+[class*="guildsWrapper_"]
+  [class*="guilds_"]
+  [class*="guild_"]
+  [class*="guildInner_"],
+div[class^="listItem_"] foreignObject img,
+div[class^="listItem_"] foreignObject a[class^="button_"],
+div[class^="listItem_"] foreignObject [class^="childWrapper_"],
+div[class^="listItem_"] foreignObject [class^="folder_"],
+div[class^="listItem_"] div[class^="wrapperSimple_"],
+[class^="circleIconButton_"],
+[class^="folderIconWrapper_"],
+[class^="avatarContainer_"],
+[class^="executedCommandAvatar_"],
+[class^="folderIconWrapper_"]
+  > [class^="closedFolderIconWrapper_"]
+  > [class^="icon_"],
+[class^="embedAuthorIcon_"] {
+  border-radius: 0% !important;
+}
+
+[class*="avatarMasked_"],
+[class*="maskProfile_"],
+[class*="mask_"],
+[class*="avatar_"] svg[class*="mask_"] > foreignObject,
+[class*="avatarWrapper_"] svg[class*="mask_"] > foreignObject,
+[class*="avatarHint_"] > foreignObject,
+[class*="wrapper_"] svg[class*="mask_"] > foreignObject,
+[class*="callAvatarWrapper_"] svg[class*="callAvatarMask_"] > foreignObject,
+div[class^="listItem_"] [class^="wrapper_"] > svg > foreignObject,
+[class^="bannerSVGWrapper_"] > foreignObject,
+[class^="avatarDecoration_"] > foreignObject,
+[class^="avatarDecorationHint_"] > foreignObject,
+[class^="viewers_"] > [class*="viewer_"] {
+  mask: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+
+[class*="avatarHint_"],
+[class*="avatarNormal_"],
+[class*="avatarWrapper_"] [class*="wrapper_"],
+[class*="avatarWrapper_"] [class*="image_"],
+[class*="replyAvatar_"] {
+  border: none;
+  border-radius: 0 !important;
+}
+
+[class^="userPopout_"] [class*="avatarWrapper_"] > [class^="avatarHint_"] {
+  display: none;
+}
