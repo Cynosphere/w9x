@@ -6,7 +6,7 @@
 
   &::-webkit-scrollbar-track {
     visibility: visible !important;
-    background-color: var(--ThreeDHighlight) !important;
+    background-color: var(--Scrollbar) !important;
     border: none;
     border-radius: 0;
     margin: 0;

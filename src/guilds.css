@@ -1,12 +1,11 @@
 [class*="guilds_"] {
-  background-color: var(--Window) !important;
+  background-color: var(--ThreeDFace) !important;
   box-shadow: var(--RebarBorder);
-  width: 28px;
+  width: 48px;
   padding: 2px;
-  overflow: visible;
 
   [class^="scroller_"] {
-    overflow: visible !important;
+    padding-top: 4px;
 
     &::-webkit-scrollbar,
     &::-webkit-scrollbar-thumb,
@@ -20,57 +19,107 @@
   }
 
   [class^="listItemWrapper_"] > [class^="wrapper_"] {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     & > svg {
-      width: 24px;
-      height: 24px;
+      width: 40px;
+      height: 40px;
     }
   }
   [class^="listItem_"] {
-    --custom-list-items-list-item-width: 28px;
+    --custom-list-items-list-item-width: 48px;
     margin: 0 !important;
 
-    [class^="pill_"] {
-      height: 24px;
-      [class^="item_"] {
-        &:not([style*="height: 8px;"]) {
+    [class^="lowerBadge_"] {
+      top: 0;
+      z-index: 11;
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:has(> [class^="numberBadge_"][style*="--status-danger"]) {
+        background-image: var(--ImagePing);
+
+        & > [class^="numberBadge_"] {
           display: none;
         }
+      }
+    }
+
+    & > [class^="guildSeparator_"] {
+      width: 48px;
+      border-radius: 0;
+      height: 1px;
+      border-top: solid 1px var(--ThreeDShadow);
+      background-color: var(--ThreeDHighlight);
+      margin: 3px 0;
+    }
+
+    [class^="pill_"] {
+      width: 16px;
+      height: 16px;
+      left: unset;
+      right: 4px;
+      z-index: 10;
+      pointer-events: none;
+
+      &:has(> [class^="item_"][style*="height: 8px;"]) {
+        background-image: var(--ImageUnread);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      [class^="item_"] {
+        display: none;
       }
     }
 
     [class*="selected_"] > [class^="wrapper_"]:has(> svg) {
       box-shadow: inset -1px -1px 0 0 var(--ThreeDHighlight),
         inset 1px 1px 0 0 var(--ThreeDShadow);
+      &:hover {
+        box-shadow: inset -1px -1px 0 0 var(--ThreeDHighlight),
+          inset 1px 1px 0 0 var(--ThreeDShadow);
+      }
     }
 
     [class^="wrapper_"]:has(> svg) {
-      width: 24px;
-      height: 24px;
+      width: 40px;
+      height: 40px;
       & > svg {
-        width: 24px;
-        height: 24px;
+        width: 40px;
+        height: 40px;
 
         img[class^="icon_"] {
-          width: 32px;
-          height: 32px;
+          width: 38.41px;
+          height: 38.41px;
         }
 
         [class^="folder_"] {
           background-color: transparent;
           [class^="folderIconWrapper_"] {
-            width: 32px;
-            height: 32px;
-            margin: 8px;
+            width: 38.41px;
+            height: 38.41px;
+            padding: 4.8px;
 
-            mask-image: var(--ImageFolderClosed);
-            -webkit-mask-image: var(--ImageFolderClosed);
+            /*mask-image: var(--ImageFolderClosed);
             mask-repeat: no-repeat;
             mask-position: center;
             mask-mode: luminance;
+            -webkit-mask-image: var(--ImageFolderClosed);
             -webkit-mask-repeat: no-repeat;
-            -webkit-mask-position: center;
+            -webkit-mask-position: center;*/
+            background-image: var(--ImageFolderClosed);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: transparent !important;
+
+            &:has(
+                [class^="expandedFolderIconWrapper_"]:not([style^="transform:"])
+              ) {
+              background-image: none;
+            }
 
             [class^="closedFolderIconWrapper_"] {
               display: none;
@@ -80,22 +129,29 @@
               width: unset;
               height: unset;
               & > svg {
-                width: 32px;
-                height: 32px;
+                width: 38.41px;
+                height: 38.41px;
 
                 background-color: currentColor;
 
-                mask-image: var(--ImageFolderOpen);
-                -webkit-mask-image: var(--ImageFolderOpen);
+                /*mask-image: var(--ImageFolderOpen);
                 mask-repeat: no-repeat;
                 mask-position: center;
                 mask-mode: luminance;
+                -webkit-mask-image: var(--ImageFolderOpen);
                 -webkit-mask-repeat: no-repeat;
-                -webkit-mask-position: center;
+                -webkit-mask-position: center;*/
+                background-image: var(--ImageFolderOpen);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: transparent !important;
 
                 & > path {
                   display: none;
                 }
+              }
+              &[style^="transform:"] > svg {
+                background-image: none;
               }
             }
           }
@@ -112,68 +168,83 @@
       }
     }
     [class^="wrapperSimple_"] {
-      width: 24px;
-      height: 24px;
+      width: 40px;
+      height: 40px;
       & > svg {
-        width: 24px;
-        height: 24px;
+        width: 40px;
+        height: 40px;
 
         img[class^="icon_"] {
-          width: 32px;
-          height: 32px;
+          width: 38px;
+          height: 38px;
         }
+      }
+    }
+
+    [data-list-item-id="guildsnav___home"] > [class^="childWrapper_"] > svg {
+      background-image: var(--ImageHome);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 38.41px;
+      height: 38.41px;
+
+      & > path {
+        display: none;
       }
     }
   }
 
   ul[id^="folder-items-"] {
     height: unset !important;
-    width: auto;
-    position: absolute;
-    z-index: 20;
-    top: 0px;
-    left: 28px;
     box-shadow: var(--WindowFrame);
-    background-color: var(--Window);
     padding: 4px;
+    & > [class^="listItem_"] {
+      --custom-list-items-list-item-width: 40px;
 
-    [class^="listItem_"] {
-      --custom-list-items-list-item-width: unset !important;
-      height: 18px;
-
-      [class^="blobContainer_"] {
-        display: flex;
-        &::after {
-          font-family: var(--font-primary);
-          font-size: var(--FontSize);
-          color: var(--WindowText);
-          content: attr(data-dnd-name);
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          display: inline-flex;
-          line-height: 18px;
-        }
+      [class^="pill_"] {
+        right: 0px;
       }
     }
   }
 
   [class^="wrapper_"]:has(> [class^="expandedFolderBackground_"]) {
     width: unset !important;
-    overflow: visible;
   }
 
   [class^="expandedFolderBackground_"] {
     background-color: transparent;
     width: unset;
 
-    & + [class^="listItem_"] {
-      /*&::after {
+    & + [class^="listItem_"] [class^="wrapper_"]:has(> svg) {
+      height: 62px;
+
+      &::after {
+        position: absolute;
         content: "";
-        height: 13px;
-        width: 24px;
+        height: 23px;
+        width: 40px;
         left: 0;
         bottom: 0;
-      }*/
+        text-align: center;
+        background-image: var(--ImageScrollbarDown);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      &:has([class^="folder_"][aria-expanded="true"]) {
+        box-shadow: inset -1px -1px 0 0 var(--ThreeDShadow),
+          inset 1px 1px 0 0 var(--ThreeDHighlight);
+      }
+
+      &:hover::after {
+        box-shadow: inset 0 1px var(--ThreeDShadow),
+          inset -1px -1px 0 0 var(--ThreeDShadow),
+          inset 1px 2px 0 0 var(--ThreeDHighlight);
+      }
+      &:has([class^="folder_"][aria-expanded="true"])::after {
+        box-shadow: inset 0 1px var(--ThreeDShadow),
+          inset -1px -1px 0 0 var(--ThreeDHighlight),
+          inset 1px 2px 0 0 var(--ThreeDShadow);
+      }
     }
   }
 }
