@@ -16,6 +16,10 @@
       width: 0px !important;
       min-width: 0px !important;
     }
+
+    & > div[style*="height: 56px;"]:has(> [class^="listItem_"]) {
+      height: unset !important;
+    }
   }
 
   [class^="listItemWrapper_"] > [class^="wrapper_"] {
@@ -37,11 +41,46 @@
       height: 16px;
       background-repeat: no-repeat;
       background-position: center;
+      image-rendering: pixelated;
 
       &:has(> [class^="numberBadge_"][style*="--status-danger"]) {
         background-image: var(--ImagePing);
 
         & > [class^="numberBadge_"] {
+          display: none;
+        }
+      }
+    }
+    [class^="upperBadge_"] {
+      left: 0;
+      right: unset;
+      z-index: 11;
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+      image-rendering: pixelated;
+
+      &:has(
+          > [class^="iconBadge_"]
+            > svg
+            > path[d="M4 2.5C2.897 2.5 2 3.397 2 4.5V15.5C2 16.604 2.897 17.5 4 17.5H11V19.5H7V21.5H17V19.5H13V17.5H20C21.103 17.5 22 16.604 22 15.5V4.5C22 3.397 21.103 2.5 20 2.5H4ZM20 4.5V13.5H4V4.5H20Z"]
+        ) {
+        background-image: var(--ImageMonitor);
+
+        & > [class^="iconBadge_"] {
+          display: none;
+        }
+      }
+
+      &:has(
+          > [class^="iconBadge_"]
+            > svg
+            > path[d="M11.383 3.07904C11.009 2.92504 10.579 3.01004 10.293 3.29604L6 8.00204H3C2.45 8.00204 2 8.45304 2 9.00204V15.002C2 15.552 2.45 16.002 3 16.002H6L10.293 20.71C10.579 20.996 11.009 21.082 11.383 20.927C11.757 20.772 12 20.407 12 20.002V4.00204C12 3.59904 11.757 3.23204 11.383 3.07904ZM14 5.00195V7.00195C16.757 7.00195 19 9.24595 19 12.002C19 14.759 16.757 17.002 14 17.002V19.002C17.86 19.002 21 15.863 21 12.002C21 8.14295 17.86 5.00195 14 5.00195ZM14 9.00195C15.654 9.00195 17 10.349 17 12.002C17 13.657 15.654 15.002 14 15.002V13.002C14.551 13.002 15 12.553 15 12.002C15 11.451 14.551 11.002 14 11.002V9.00195Z"]
+        ) {
+        background-image: var(--ImageSpeaker);
+
+        & > [class^="iconBadge_"] {
           display: none;
         }
       }
@@ -53,7 +92,7 @@
       height: 1px;
       border-top: solid 1px var(--ThreeDShadow);
       background-color: var(--ThreeDHighlight);
-      margin: 3px 0;
+      margin: 3px 2px;
     }
 
     [class^="pill_"] {
@@ -68,6 +107,7 @@
         background-image: var(--ImageUnread);
         background-repeat: no-repeat;
         background-position: center;
+        image-rendering: pixelated;
       }
 
       [class^="item_"] {
@@ -106,14 +146,13 @@
             /*mask-image: var(--ImageFolderClosed);
             mask-repeat: no-repeat;
             mask-position: center;
-            mask-mode: luminance;
-            -webkit-mask-image: var(--ImageFolderClosed);
-            -webkit-mask-repeat: no-repeat;
-            -webkit-mask-position: center;*/
+            mask-mode: luminance;*/
             background-image: var(--ImageFolderClosed);
             background-repeat: no-repeat;
             background-position: center;
             background-color: transparent !important;
+            background-size: 38.41px;
+            image-rendering: pixelated;
 
             &:has(
                 [class^="expandedFolderIconWrapper_"]:not([style^="transform:"])
@@ -137,14 +176,13 @@
                 /*mask-image: var(--ImageFolderOpen);
                 mask-repeat: no-repeat;
                 mask-position: center;
-                mask-mode: luminance;
-                -webkit-mask-image: var(--ImageFolderOpen);
-                -webkit-mask-repeat: no-repeat;
-                -webkit-mask-position: center;*/
+                mask-mode: luminance;*/
                 background-image: var(--ImageFolderOpen);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-color: transparent !important;
+                background-size: 38.41px;
+                image-rendering: pixelated;
 
                 & > path {
                   display: none;
@@ -181,12 +219,50 @@
       }
     }
 
+    [class^="circleIconButton_"] {
+      background-color: transparent;
+      &:hover {
+        box-shadow: inset -1px -1px 0 0 var(--ThreeDShadow),
+          inset 1px 1px 0 0 var(--ThreeDHighlight);
+      }
+    }
+
     [data-list-item-id="guildsnav___home"] > [class^="childWrapper_"] > svg {
       background-image: var(--ImageHome);
       background-repeat: no-repeat;
       background-position: center;
+      image-rendering: pixelated;
       width: 38.41px;
       height: 38.41px;
+      background-size: 38.41px;
+
+      & > path {
+        display: none;
+      }
+    }
+
+    [data-list-item-id="guildsnav___guild-discover-button"] > svg {
+      background-image: var(--ImageDiscovery);
+      background-repeat: no-repeat;
+      background-position: center;
+      image-rendering: pixelated;
+      width: 38.41px;
+      height: 38.41px;
+      background-size: 38.41px;
+
+      & > path {
+        display: none;
+      }
+    }
+
+    [data-list-item-id="guildsnav___create-join-button"] > svg {
+      background-image: var(--ImageAdd);
+      background-repeat: no-repeat;
+      background-position: center;
+      image-rendering: pixelated;
+      width: 38.41px;
+      height: 38.41px;
+      background-size: 38.41px;
 
       & > path {
         display: none;
@@ -229,6 +305,7 @@
         background-image: var(--ImageScrollbarDown);
         background-repeat: no-repeat;
         background-position: center;
+        image-rendering: pixelated;
       }
       &:has([class^="folder_"][aria-expanded="true"]) {
         box-shadow: inset -1px -1px 0 0 var(--ThreeDShadow),

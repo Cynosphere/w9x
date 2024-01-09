@@ -1,0 +1,469 @@
+[class*="baseLayer_"] > [class^="container_"] {
+  padding-top: 76px;
+  background-color: var(--ThreeDFace);
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 74px;
+    width: calc(100vw - var(--devtools-sidebar-width));
+    top: 0;
+    left: 0;
+    box-shadow: var(--RebarBorder), inset 0 24px 0 0 var(--ThreeDFace),
+      inset 0 25px 0 0 var(--ThreeDShadow),
+      inset 0 26px 0 0 var(--ThreeDHighlight),
+      inset 0 48px 0 0 var(--ThreeDFace), inset 0 49px 0 0 var(--ThreeDShadow),
+      inset 0 50px 0 0 var(--ThreeDHighlight);
+    background-color: var(--ThreeDFace);
+  }
+
+  & > [class^="base_"] {
+    overflow: visible;
+  }
+}
+
+html.platform-win {
+  [class*="baseLayer_"] > [class^="container_"]::before {
+    width: calc(100vw - 8px - var(--devtools-sidebar-width)) !important;
+  }
+  [class^="chat_"] > [class^="title_"] {
+    width: calc(100vw - 256px);
+    [class^="toolbar_"] > [class^="search_"] {
+      left: calc(100vw - 240px - 68px);
+    }
+  }
+}
+
+section[class^="panels_"] > [class^="container_"]:last-child {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  height: 22px;
+  background-color: transparent;
+  z-index: 20;
+  padding: 0;
+
+  & > [class*="withTagAsButton_"] {
+    z-index: 20;
+    position: absolute;
+    top: -23px;
+    left: 0px;
+    padding: 6px;
+    height: 7px;
+    margin: 0;
+    border-radius: 0;
+    background-color: transparent;
+    width: unset;
+    min-width: unset;
+
+    &:hover {
+      box-shadow: var(--HoverEdge);
+    }
+    &[aria-expanded="true"] {
+      box-shadow: var(--PressedEdge);
+    }
+
+    &::after {
+      color: var(--WindowText);
+      font-family: var(--font-primary);
+      font-size: var(--FontSize);
+      content: "Account";
+      position: relative;
+      top: var(--ToolbarAccountTextOffset);
+    }
+
+    & > * {
+      display: none;
+    }
+  }
+
+  & > div {
+    & > button:nth-child(3) {
+      z-index: 20;
+      position: absolute;
+      top: -23px;
+      left: var(--ToolbarAccountWidth);
+      padding: 6px;
+      height: 19px;
+      margin: 0;
+      border-radius: 0;
+      background-color: transparent;
+      width: unset;
+      min-width: unset;
+      color: unset;
+      cursor: default;
+
+      &:hover {
+        box-shadow: var(--HoverEdge);
+      }
+      &[aria-expanded="true"] {
+        box-shadow: var(--PressedEdge);
+      }
+
+      &::after {
+        color: var(--WindowText);
+        font-family: var(--font-primary);
+        font-size: var(--FontSize);
+        content: "Settings";
+      }
+
+      & > * {
+        display: none;
+      }
+    }
+
+    & > button:not(:nth-child(3)) {
+      width: 24px;
+      height: 22px;
+      border-radius: 0;
+
+      &:hover {
+        box-shadow: var(--HoverEdge);
+        background-color: transparent;
+      }
+
+      /* temp */
+      & > div {
+        width: 24px;
+        height: 22px;
+        & > svg {
+          width: 16px;
+          height: 16px;
+          padding: 3px 4px;
+          & > svg {
+            width: 24px;
+            height: 22px;
+            padding: 3px 4px;
+          }
+        }
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 0;
+    width: 1px;
+    height: 18px;
+    margin: 2px 3px;
+    background-color: var(--ThreeDShadow);
+    border-right: solid 1px var(--ThreeDHighlight);
+  }
+}
+
+a[href="https://support.discord.com"]:has(> [class^="iconWrapper_"])
+{
+  z-index: 20;
+  position: absolute;
+  top: -23px;
+  left: calc(-56px + var(--ToolbarAccountWidth) + var(--ToolbarSettingsWidth));
+  padding: 6px !important;
+  height: 19px !important;
+  margin: 0;
+  border-radius: 0;
+  background-color: transparent;
+  width: unset !important;
+  min-width: unset;
+  color: unset;
+  cursor: default;
+  line-height: unset;
+
+  &:hover {
+    box-shadow: var(--HoverEdge);
+  }
+  &[aria-expanded="true"] {
+    box-shadow: var(--PressedEdge);
+  }
+
+  &::after {
+    color: var(--WindowText);
+    font-family: var(--font-primary);
+    font-size: var(--FontSize);
+    content: "Help";
+    position: relative;
+    top: var(--ToolbarHelpTextOffset);
+  }
+
+  & > * {
+    display: none;
+  }
+}
+
+[class^="iconWrapper_"] {
+  &:has(
+      > svg
+        > g
+        > path[d="M17.5053 1.76605C17.5053 1.76605 26.7154 8.05195 23.2155 16.8783C19.7157 25.7047 12.7544 23.2563 15.3562 20.6775C17.9581 18.0986 12.2862 16.3487 8.65588 13.0024L17.4976 1.76605"]
+    ) {
+    z-index: 20;
+    position: absolute;
+    top: -23px;
+    left: calc(
+      -56px + var(--ToolbarAccountWidth) + var(--ToolbarSettingsWidth)
+    );
+    padding: 6px !important;
+    height: 19px !important;
+    margin: 0;
+    border-radius: 0;
+    background-color: transparent;
+    width: unset !important;
+    min-width: unset;
+    color: unset;
+    cursor: default;
+    line-height: unset;
+
+    &:hover {
+      box-shadow: var(--HoverEdge);
+    }
+    &[aria-expanded="true"] {
+      box-shadow: var(--PressedEdge);
+    }
+
+    &::after {
+      color: var(--WindowText);
+      font-family: var(--font-primary);
+      font-size: var(--FontSize);
+      content: "Help";
+      position: relative;
+      top: var(--ToolbarHelpTextOffset);
+    }
+
+    & > * {
+      display: none;
+    }
+  }
+  &:has(> svg > path[class^="downloadArrow_"]),
+  &:has(> svg > path[class^="updateIconForeground_"]) {
+    z-index: 20;
+    position: absolute;
+    top: -23px;
+    left: calc(
+      -56px + var(--ToolbarAccountWidth) + var(--ToolbarSettingsWidth) + var(--ToolbarHelpWidth)
+    );
+    padding: 6px !important;
+    height: 19px !important;
+    margin: 0;
+    border-radius: 0;
+    background-color: transparent;
+    width: unset !important;
+    min-width: unset;
+    color: unset;
+    cursor: default;
+    line-height: unset;
+
+    &:hover {
+      box-shadow: var(--HoverEdge);
+    }
+    &[aria-expanded="true"] {
+      box-shadow: var(--PressedEdge);
+    }
+
+    &::after {
+      color: var(--WindowText);
+      font-family: var(--font-primary);
+      font-size: var(--FontSize);
+      content: "Update";
+      position: relative;
+      top: var(--ToolbarUpdateTextOffset);
+    }
+
+    & > * {
+      display: none;
+    }
+  }
+}
+
+html:not(.app-focused) {
+  section[class^="panels_"] > [class^="container_"]:last-child {
+    & > [class*="withTagAsButton_"]::after,
+    &
+      > div
+      > button:has(
+        > div
+          > svg
+          > path[d="M19.738 10H22V14H19.739C19.498 14.931 19.1 15.798 18.565 16.564L20 18L18 20L16.565 18.564C15.797 19.099 14.932 19.498 14 19.738V22H10V19.738C9.069 19.498 8.203 19.099 7.436 18.564L6 20L4 18L5.436 16.564C4.901 15.799 4.502 14.932 4.262 14H2V10H4.262C4.502 9.068 4.9 8.202 5.436 7.436L4 6L6 4L7.436 5.436C8.202 4.9 9.068 4.502 10 4.262V2H14V4.261C14.932 4.502 15.797 4.9 16.565 5.435L18 3.999L20 5.999L18.564 7.436C19.099 8.202 19.498 9.069 19.738 10ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"]
+      )::after,
+    &
+      > div
+      > button:has(
+        > div
+          > svg
+          > path[d="M10.56 1.1c-.46.05-.7.53-.64.98.18 1.16-.19 2.2-.98 2.53-.8.33-1.79-.15-2.49-1.1-.27-.36-.78-.52-1.14-.24-.77.59-1.45 1.27-2.04 2.04-.28.36-.12.87.24 1.14.96.7 1.43 1.7 1.1 2.49-.33.8-1.37 1.16-2.53.98-.45-.07-.93.18-.99.64a11.1 11.1 0 0 0 0 2.88c.06.46.54.7.99.64 1.16-.18 2.2.19 2.53.98.33.8-.14 1.79-1.1 2.49-.36.27-.52.78-.24 1.14.59.77 1.27 1.45 2.04 2.04.36.28.87.12 1.14-.24.7-.95 1.7-1.43 2.49-1.1.8.33 1.16 1.37.98 2.53-.07.45.18.93.64.99a11.1 11.1 0 0 0 2.88 0c.46-.06.7-.54.64-.99-.18-1.16.19-2.2.98-2.53.8-.33 1.79.14 2.49 1.1.27.36.78.52 1.14.24.77-.59 1.45-1.27 2.04-2.04.28-.36.12-.87-.24-1.14-.96-.7-1.43-1.7-1.1-2.49.33-.8 1.37-1.16 2.53-.98.45.07.93-.18.99-.64a11.1 11.1 0 0 0 0-2.88c-.06-.46-.54-.7-.99-.64-1.16.18-2.2-.19-2.53-.98-.33-.8.14-1.79 1.1-2.49.36-.27.52-.78.24-1.14a11.07 11.07 0 0 0-2.04-2.04c-.36-.28-.87-.12-1.14.24-.7.96-1.7 1.43-2.49 1.1-.8-.33-1.16-1.37-.98-2.53.07-.45-.18-.93-.64-.99a11.1 11.1 0 0 0-2.88 0ZM16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"]
+      )::after {
+      color: var(--ThreeDShadow) !important;
+    }
+  }
+  [class^="iconWrapper_"] {
+    &:has(
+        > svg
+          > g
+          > path[d="M17.5053 1.76605C17.5053 1.76605 26.7154 8.05195 23.2155 16.8783C19.7157 25.7047 12.7544 23.2563 15.3562 20.6775C17.9581 18.0986 12.2862 16.3487 8.65588 13.0024L17.4976 1.76605"]
+      )::after,
+    &:has(> svg > path[class^="downloadArrow_"])::after,
+    &:has(> svg > path[class^="updateIconForeground_"])::after {
+      color: var(--ThreeDShadow) !important;
+    }
+  }
+  a[href="https://support.discord.com"]:has(> [class^="iconWrapper_"])::after
+  {
+    color: var(--ThreeDShadow) !important;
+  }
+}
+
+[class^="chat_"],
+[class^="sidebar_"] + main[class^="container_"],
+[class^="sidebar_"] + main[class^="pageWrapper_"] {
+  overflow: visible;
+}
+
+[id^="popout_"] {
+  &:has([class^="accountProfilePopoutWrapper_"]) {
+    top: 45px !important;
+  }
+  &:has(> #staff-help-popout) {
+    right: unset !important;
+    left: calc(
+      6px + var(--ToolbarAccountWidth) + var(--ToolbarSettingsWidth)
+    ) !important;
+    top: 45px !important;
+  }
+}
+
+[class^="chat_"] > [class^="title_"] {
+  height: 22px;
+  min-height: 22px;
+  padding: 0;
+  position: absolute;
+  top: -26px;
+  left: -294px;
+  background-color: transparent;
+  width: calc(100vw - 248px);
+
+  [class^="iconWrapper_"] {
+    &:has(
+        > svg
+          > path[d="M10.99 3.16A1 1 0 1 0 9 2.84L8.15 8H4a1 1 0 0 0 0 2h3.82l-.67 4H3a1 1 0 1 0 0 2h3.82l-.8 4.84a1 1 0 0 0 1.97.32L8.85 16h4.97l-.8 4.84a1 1 0 0 0 1.97.32l.86-5.16H20a1 1 0 1 0 0-2h-3.82l.67-4H21a1 1 0 1 0 0-2h-3.82l.8-4.84a1 1 0 1 0-1.97-.32L15.15 8h-4.97l.8-4.84ZM14.15 14l.67-4H9.85l-.67 4h4.97Z"]
+      ),
+    &:has(
+        > svg
+          > path[d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z"]
+      ) {
+      display: none;
+    }
+  }
+
+  [class^="children_"] {
+    height: 22px;
+
+    [class^="titleWrapper_"] {
+      margin: 0 4px;
+
+      & > h1 {
+        font-size: var(--FontSize);
+        font-weight: normal;
+      }
+    }
+
+    & > div > [class*="avatar_"] {
+      width: 22px !important;
+      height: 22px !important;
+      margin: 0;
+      padding: 3px;
+
+      & > svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    [class^="divider_"] {
+      display: none;
+    }
+
+    [class^="topic_"] {
+      height: 22px;
+      margin: 0;
+      padding: 2px;
+      background-color: var(--Window);
+      box-shadow: var(--InnerEdge);
+
+      & > span:first-of-type {
+        margin-left: 4px;
+      }
+      span {
+        color: var(--WindowText);
+        font-size: var(--FontSize);
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  [class^="toolbar_"] {
+    height: 22px;
+    position: absolute;
+    left: 56px;
+    top: -24px;
+
+    [class*="iconWrapper_"] {
+      margin: 0;
+      width: 24px;
+      height: 22px;
+      border-radius: 0;
+
+      &:hover {
+        box-shadow: var(--HoverEdge);
+        background-color: transparent;
+      }
+      &[class*="selected_"] {
+        box-shadow: var(--PressedEdge);
+      }
+
+      /* temp */
+      & > svg {
+        height: 22px;
+        padding: 3px 4px;
+      }
+    }
+
+    & > [class^="search_"] {
+      position: absolute;
+      left: calc(100vw - 240px - 60px);
+      top: 24px;
+      margin: 0;
+
+      & > [class^="search_"] > [class^="searchBar_"] {
+        height: 22px;
+        width: 240px;
+        border-radius: 0;
+        background-color: var(--Window);
+        box-shadow: var(--InnerEdge);
+
+        .public-DraftEditorPlaceholder-inner {
+          color: var(--WindowText);
+          font-size: var(--FontSize);
+        }
+
+        & > [class^="icon_"] {
+          width: 20px;
+          height: 22px;
+
+          & > [class^="iconContainer_"] {
+            background-image: var(--ImageSearch);
+            background-repeat: no-repeat;
+            background-position: center;
+            image-rendering: pixelated;
+
+            & > svg {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

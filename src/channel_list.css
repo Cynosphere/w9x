@@ -8,6 +8,7 @@
     background: var(--Window) !important;
 
     & > [class^="container_"][class*="clickable_"] {
+      background: var(--ThreeDFace) !important;
       & > header[class^="header_"] {
         padding: 0px;
         padding-bottom: 2px;
@@ -20,6 +21,23 @@
           & > [class*="name_"] {
             font-weight: normal;
             font-size: var(--FontSize);
+          }
+          & > [class^="headerChildren_"] {
+            width: 20px;
+            height: 18px;
+
+            background-color: var(--WindowText);
+            mask-image: var(--ImageScrollbarDown);
+            mask-repeat: no-repeat;
+            mask-position: center;
+
+            &:has(> svg[class*="open"]) {
+              mask-image: var(--ImageClose);
+            }
+
+            & > svg {
+              display: none;
+            }
           }
         }
       }
@@ -67,5 +85,20 @@
         margin-bottom: 4px;
       }
     }
+  }
+}
+
+[id^="popout_"]:has(#guild-header-popout) {
+  top: 123px !important;
+  left: 62px !important;
+  width: 236px;
+
+  & > div {
+    transition: none;
+    transform: none;
+  }
+
+  #guild-header-popout {
+    width: 236px;
   }
 }

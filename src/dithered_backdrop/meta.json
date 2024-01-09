@@ -1,0 +1,10 @@
+{
+  "name": "Dithered Backdrop",
+  "optional": true,
+  "optionNames": {
+    "dithered_backdrop": {
+      "default": true,
+      "name": "On"
+    }
+  }
+}

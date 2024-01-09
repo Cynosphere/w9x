@@ -1,0 +1,10 @@
+[class^="backdrop_"] {
+  opacity: 1 !important;
+  background-color: transparent !important;
+  background-image: var(--ImageDither) !important;
+}
+
+[class^="layer_"]:has([class^="standardSidebarView_"]) {
+  background-color: transparent !important;
+  background-image: var(--ImageDither) !important;
+}

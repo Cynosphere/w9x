@@ -52,6 +52,16 @@
 
   --FontSize: 12px;
   --TitlebarOffset: 2px;
+
+  /* Toolbar offsets, these need to be hardcoded as theres no way to get another element's width in CSS */
+  /* Padding included */
+  --ToolbarAccountWidth: 54px;
+  --ToolbarSettingsWidth: 60px;
+  --ToolbarHelpWidth: 36px;
+
+  --ToolbarAccountTextOffset: 0px;
+  --ToolbarHelpTextOffset: -7px;
+  --ToolbarUpdateTextOffset: -7px;
 }
 
 [class*="menu_"] [class^="item_"],

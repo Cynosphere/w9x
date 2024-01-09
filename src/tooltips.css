@@ -5,11 +5,13 @@
   background-color: var(--Tooltip);
   border-radius: 0;
   color: var(--TooltipText);
+  transform: none !important;
+  opacity: 1 !important;
 
   [class^="tooltipContent_"] {
     padding: 2px 4px;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: var(--FontSize);
+    line-height: var(--FontSize);
   }
 
   [class^="tooltipPointer_"] {
@@ -18,5 +20,9 @@
 
   [class*="rowGuildName_"] {
     align-items: center;
+  }
+
+  [class^="guildNameText_"] {
+    color: var(--TooltipText);
   }
 }

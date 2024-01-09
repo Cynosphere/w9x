@@ -97,6 +97,9 @@ async function generateSections() {
         let contents;
         try {
           contents = await readFile(join(basepath, filename + ".css"), "utf8");
+
+          // Strip out comments
+          contents = contents.replace(/\/\*.*?\*\//gis, "");
         } catch (err) {
           if (err.code == "ENOENT") {
             console.error(
