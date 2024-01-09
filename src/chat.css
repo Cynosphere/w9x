@@ -1,0 +1,49 @@
+[class^="chat_"] {
+  border-left: 4px solid var(--ThreeDFace);
+
+  [class^="messagesWrapper_"] {
+    padding: 2px;
+    box-shadow: var(--InnerEdge);
+    background-color: var(--Window);
+
+    [class^="scroller_"] {
+      margin: 2px;
+
+      [class^="scrollerContent_"] {
+        padding: 4px;
+
+        [class^="scrollerSpacer_"] {
+          height: 0;
+        }
+      }
+    }
+  }
+
+  [class^="form_"] {
+    border-top: 2px solid var(--ThreeDFace);
+    margin-top: 0;
+  }
+
+  [class*="compact_"] {
+    --custom-message-margin-compact-indent: 0;
+    --custom-message-padding-vertical-container-compact: 0;
+    --custom-message-reply-indent: 0;
+
+    [class*="timestamp_"] {
+      width: unset !important;
+      &[class*="latin12CompactTimeStamp_"] {
+        width: unset !important;
+      }
+
+      &[class*="timestampVisibleOnHover_"] {
+        opacity: 1 !important;
+      }
+
+      [class^="separator_"] {
+        opacity: 1;
+        position: relative;
+        display: inline;
+      }
+    }
+  }
+}

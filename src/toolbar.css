@@ -337,7 +337,7 @@ html:not(.app-focused) {
   padding: 0;
   position: absolute;
   top: -26px;
-  left: -294px;
+  left: -298px;
   background-color: transparent;
   width: calc(100vw - 248px);
 

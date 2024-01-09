@@ -22,7 +22,7 @@ node build.mjs
 
 Copy raw links from the `src` folder and use `@import url("<raw link>")`.
 
-`light_scheme`, `dark_scheme`, `syntax`, and `guild_size` are required.
+`light_scheme`, `dark_scheme`, and `font` are required.
 Any other choice option in a folder is up to you.
 
 <!-- prettier-ignore -->
