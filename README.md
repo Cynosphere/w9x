@@ -1,6 +1,12 @@
 # w9x
 
 <!-- prettier-ignore -->
+> [!WARNING]
+> I am releasing this in an unfinished state because I do not want to be seen as a gatekeeper.
+> I do not have the consistent motivation to be able to work on this because roadblocks tend to kill my motivation with anything.
+> PRs are welcome if you wish to contribute.
+
+<!-- prettier-ignore -->
 > [!CAUTION]
 > **This theme will not work properly on the Discord desktop client yet!** This theme heavily relies on [CSS nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting), which Discord's Electron version (22, Chromium 108) does not support.
 > Electron 28 (Chromium 120) is currently being tested on the development client branch, so it won't be too long until it works.

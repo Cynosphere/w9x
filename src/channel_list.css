@@ -62,30 +62,150 @@
       }
     }
 
+    & > [class^="animatedBannerHoverLayer_"] {
+      display: none;
+    }
+
     & > [class^="scroller_"] {
       padding: 2px;
       box-shadow: var(--InnerEdge);
 
-      & > ul {
-        & > [style="height: 84px;"],
-        & > [style="height: 12px;"] {
-          display: none;
+      & > [class^="content_"] {
+        & > div[style="height: 84px;"],
+        & > div[style="height: 84px;"] + div[style="height: 12px;"],
+        & > div[style="height: 0px;"] + div[style="height: 12px;"],
+        & > [class^="sectionDivider"] + div[style="height: 12px;"] {
+          height: 0px !important;
         }
-      }
 
-      &::-webkit-scrollbar-track {
-        margin-right: 4px;
-      }
-      &::-webkit-scrollbar-button:single-button:vertical:decrement {
-        margin-right: 4px;
-        margin-top: 4px;
-      }
-      &::-webkit-scrollbar-button:single-button:vertical:increment {
-        margin-right: 4px;
-        margin-bottom: 4px;
+        [class^="sectionDivider_"] {
+          height: 1px;
+          border-top: solid 1px var(--ThreeDShadow);
+          background-color: var(--ThreeDHighlight);
+          margin: 3px 2px;
+          width: calc(100% - 4px);
+        }
+
+        [class^="containerDefault_"] {
+          margin-left: 0;
+          padding: 0;
+
+          [class^="iconVisibility_"] {
+            margin-left: 0;
+            padding: 0;
+            height: unset;
+          }
+
+          [class^="link_"] {
+            padding: 0;
+
+            [class^="name_"] {
+              line-height: 16px;
+              font-size: var(--FontSize);
+              font-weight: normal;
+              letter-spacing: unset;
+            }
+
+            [class^="iconContainer_"] {
+              margin-right: 3px;
+              & > [class^="icon_"] {
+                width: 16px;
+                height: 16px;
+              }
+            }
+
+            [class^="channelInfo_"] {
+              & > [class^="wrapper_"] {
+                border-radius: 0;
+                line-height: 16px;
+                height: 16px;
+
+                & > [class^="users_"] {
+                  background-color: transparent;
+                  color: var(--WindowText);
+                  padding-right: 6px;
+                  width: unset;
+                }
+                & > [class^="total_"] {
+                  background-color: transparent;
+                  color: var(--ThreeDHighlight);
+                  padding: 0;
+
+                  &::after {
+                    content: "/";
+                    border: none;
+                    left: -4px;
+                  }
+                }
+              }
+            }
+          }
+
+          &:has([class*="clickable_"]) {
+            [class^="name_"] {
+              margin-left: 38px;
+              line-height: 16px;
+              font-size: var(--FontSize);
+              font-weight: normal;
+              letter-spacing: unset;
+
+              &::after {
+                content: "";
+                display: block;
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                left: 19px;
+                top: 0;
+                background-image: var(--ImageFolderOpen16);
+                background-repeat: no-repeat;
+                background-position: center;
+                image-rendering: pixelated;
+              }
+            }
+
+            [class*="collapsed_"] [class^="name_"]::after {
+              background-image: var(--ImageFolderClosed16);
+            }
+
+            & + [class^="containerDefault_"]:not(:has([class*="clickable_"])),
+            & + [class^="container_"] {
+              margin-left: 38px;
+            }
+
+            /* this doesnt work properly if a higher folder is closed, itll just
+            effect every subsequent folder */
+            /*&:has([class*="collapsed_"]) {
+              & + [class^="containerDefault_"]:not(:has([class*="clickable_"])),
+              & + [class^="container_"] {
+                display: none;
+              }
+            }*/
+          }
+        }
+
+        [class^="container_"] [class^="containerDefault_"] {
+          margin-left: 19px;
+        }
       }
     }
   }
+}
+
+.theme-light
+  [class^="base_"]
+  > [class^="content_"]
+  > [class^="sidebar_"]
+  > [class^="container_"]
+  > [class^="scroller_"]
+  > [class^="content_"]
+  [class^="containerDefault_"]
+  [class^="iconVisibility_"]
+  [class^="link_"]
+  [class^="channelInfo_"]
+  > [class^="wrapper_"]
+  > [class^="total_"] {
+  color: var(--ThreeDShadow) !important;
 }
 
 [id^="popout_"]:has(#guild-header-popout) {
