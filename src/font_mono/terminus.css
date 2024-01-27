@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Unifont";
+  src: local("Unifont"),
+    url("https://cynosphere.gitlab.io/Customizations/discord/assets/unifont-14.0.01.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Terminus (TTF)";
+  src: local("Terminus (TTF)"),
+    url("https://cynosphere.gitlab.io/Customizations/discord/assets/TerminusTTF-4.47.0.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Terminus (TTF)";
+  src: local("Terminus (TTF)"),
+    url("https://cynosphere.gitlab.io/Customizations/discord/assets/TerminusTTF-Bold-4.47.0.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Terminus (TTF)";
+  src: local("Terminus (TTF)"),
+    url("https://cynosphere.gitlab.io/Customizations/discord/assets/TerminusTTF-Bold%20Italic-4.47.0.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Terminus (TTF)";
+  src: local("Terminus (TTF)"),
+    url("https://cynosphere.gitlab.io/Customizations/discord/assets/TerminusTTF-Italic-4.47.0.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+:root {
+  --font-code: "Terminus (TTF) for Windows", "Terminus (TTF)", "Sazanami Gothic",
+    "UnifontBitmap", "Unifont Windows", "Unifont", monospace !important;
+}
+
+[class^="codeBlockText_"],
+[class^="codeLine_"],
+[class*="after_inlineCode_"],
+[class*="before_inlineCode_"],
+[class^="inlineCode_"] {
+  font-size: 12px !important;
+}
+
+.hljs-ansi-style-bold {
+  font-weight: 0;
+}
+
+[class^="markup_"] [class^="codeInline_"],
+code.inline,
+.hljs {
+  font-size: 12px !important;
+}
+
+[class^="markup_"] code,
+[class^="markup_"] [class^="codeInline_"],
+code.inline,
+[class^="codeContainer_"] .hljs.ansi {
+  line-height: 12px !important;
+}

@@ -1,0 +1,21 @@
+#app-mount [class*="baseLayer_"] {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  &[aria-hidden="true"] {
+    pointer-events: none;
+  }
+}
+[class^="standardSidebarView_"] {
+  opacity: 1 !important;
+}
+[class*="layer_"] + [class*="layer_"] {
+  opacity: 1 !important;
+  transform: unset !important;
+}
+[class*="layer_"][aria-hidden="false"]
+  + [class*="layer_"][aria-hidden="false"] {
+  display: none;
+}
+[class*="layers_"] > [class*="layer_"][class*="animating_"] {
+  will-change: unset !important;
+}

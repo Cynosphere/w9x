@@ -1,0 +1,10 @@
+{
+  "name": "Monospace Font",
+  "optionNames": {
+    "courier": {
+      "name": "Courier New",
+      "default": true
+    },
+    "terminus": "Terminus"
+  }
+}

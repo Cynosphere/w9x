@@ -337,7 +337,7 @@ html:not(.app-focused) {
   padding: 0;
   position: absolute;
   top: -26px;
-  left: -298px;
+  left: -302px;
   background-color: transparent;
   width: calc(100vw - 248px);
 
@@ -395,6 +395,7 @@ html:not(.app-focused) {
       span {
         color: var(--WindowText);
         font-size: var(--FontSize);
+        line-height: var(--FontSize);
       }
     }
 

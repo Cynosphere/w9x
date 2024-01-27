@@ -1,0 +1,271 @@
+[class^="markdown_"] [class^="codeInline_"],
+[class^="codeLine_"],
+[class^="codeBlockText_"],
+[class^="durationTimeDisplay_"],
+[class^="durationTimeSeparator_"],
+[class*="after_inlineCode_"],
+[class*="before_inlineCode_"],
+[class^="inlineCode_"],
+code.inline,
+code,
+.hljs {
+  font-family: var(--font-code) !important;
+}
+
+.hljs.ansi {
+  line-height: normal !important;
+  .bcb-lines {
+    grid-template-columns: auto;
+
+    .bcb-number {
+      display: none;
+      min-height: unset;
+    }
+
+    .bcb-code {
+      padding-left: 0;
+    }
+  }
+}
+
+[class^="markup_"] [class^="codeInline_"],
+code.inline,
+.hljs,
+.bcb-header > [class^="colorHeaderPrimary_"] {
+  color: var(--ansi-foreground) !important;
+}
+[class^="markup_"] code,
+code.inline,
+.hljs {
+  background: var(--ansi-background) !important;
+}
+[class^="markup_"] pre,
+[class^="markup_"] code {
+  border-radius: 0 !important;
+  border: none !important;
+}
+.hljs-keyword {
+  color: var(--ansi-5) !important;
+}
+.hljs-built_in {
+  color: var(--ansi-6) !important;
+}
+.hljs-type {
+  color: var(--ansi-3) !important;
+}
+.hljs-literal {
+  color: var(--ansi-3) !important;
+}
+.hljs-number {
+  color: var(--ansi-3) !important;
+}
+.hljs-regexp {
+  color: var(--ansi-6) !important;
+}
+.hljs-string {
+  color: var(--ansi-2) !important;
+}
+.hljs-subst {
+  color: var(--ansi-1) !important;
+}
+.hljs-symbol {
+  color: var(--ansi-5) !important;
+}
+.hljs-class {
+  color: var(--ansi-3) !important;
+}
+.hljs-function {
+  color: var(--ansi-4) !important;
+}
+.hljs-title {
+  color: var(--ansi-4) !important;
+}
+.hljs-params {
+  color: var(--ansi-1) !important;
+}
+.hljs-comment {
+  color: var(--highlight) !important;
+}
+.hljs-doctag {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-meta {
+  color: var(--ansi-1) !important;
+}
+.hljs-meta-keyword {
+  color: var(--ansi-3) !important;
+}
+.hljs-meta-string {
+  color: var(--ansi-2) !important;
+}
+.hljs-section {
+  color: var(--ansi-4) !important;
+}
+.hljs-tag {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-name {
+  color: var(--ansi-1) !important;
+}
+.hljs-builtin-name {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-attr {
+  color: var(--ansi-3) !important;
+}
+.hljs-attribute {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-variable {
+  color: var(--ansi-1) !important;
+}
+.hljs-bullet {
+  color: var(--ansi-1) !important;
+}
+.hljs-code {
+  color: var(--ansi-2) !important;
+}
+.hljs-emphasis {
+  color: var(--ansi-5) !important;
+}
+.hljs-strong {
+  color: var(--ansi-3) !important;
+}
+.hljs-formula {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-link {
+  color: var(--ansi-3) !important;
+}
+.hljs-quote {
+  color: var(--ansi-3) !important;
+}
+.hljs-selector-tag {
+  color: var(--ansi-1) !important;
+}
+.hljs-selector-id {
+  color: var(--ansi-4) !important;
+}
+.hljs-selector-class {
+  color: var(--ansi-3) !important;
+}
+.hljs-selector-attr {
+  color: var(--ansi-4) !important;
+}
+.hljs-selector-pseudo {
+  color: var(--ansi-3) !important;
+}
+.hljs-template-tag {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-template-variable {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-addition {
+  color: #a6e22e !important;
+  background: #384c10 !important;
+}
+.hljs-deletion {
+  color: #f92672 !important;
+  background: #4c0c23 !important;
+}
+.hljs-operator {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-pattern-match {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-typing {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-constructor {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-module-access {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-module {
+  color: var(--ansi-foreground) !important;
+}
+.hljs-ansi-foreground-black [class^="hljs-ansi-background-"],
+.hljs-ansi-foreground-black {
+  color: var(--ansi-0) !important;
+}
+.hljs-ansi-foreground-red {
+  color: var(--ansi-1) !important;
+}
+.hljs-ansi-foreground-green {
+  color: var(--ansi-2) !important;
+}
+.hljs-ansi-foreground-yellow {
+  color: var(--ansi-3) !important;
+}
+.hljs-ansi-foreground-blue {
+  color: var(--ansi-4) !important;
+}
+.hljs-ansi-foreground-magenta {
+  color: var(--ansi-5) !important;
+}
+.hljs-ansi-foreground-cyan {
+  color: var(--ansi-6) !important;
+}
+.hljs-ansi-foreground-white [class^="hljs-ansi-background-"],
+.hljs-ansi-foreground-white {
+  color: var(--ansi-7) !important;
+}
+.hljs-ansi-foreground-black .hljs-ansi-style-bold,
+.hljs-ansi-foreground-black.hljs-ansi-style-bold {
+  color: var(--ansi-8) !important;
+}
+.hljs-ansi-foreground-red .hljs-ansi-style-bold,
+.hljs-ansi-foreground-red.hljs-ansi-style-bold {
+  color: var(--ansi-9) !important;
+}
+.hljs-ansi-foreground-green .hljs-ansi-style-bold,
+.hljs-ansi-foreground-green.hljs-ansi-style-bold {
+  color: var(--ansi-10) !important;
+}
+.hljs-ansi-foreground-yellow .hljs-ansi-style-bold,
+.hljs-ansi-foreground-yellow.hljs-ansi-style-bold {
+  color: var(--ansi-11) !important;
+}
+.hljs-ansi-foreground-blue .hljs-ansi-style-bold,
+.hljs-ansi-foreground-blue.hljs-ansi-style-bold {
+  color: var(--ansi-12) !important;
+}
+.hljs-ansi-foreground-magenta .hljs-ansi-style-bold,
+.hljs-ansi-foreground-magenta.hljs-ansi-style-bold {
+  color: var(--ansi-13) !important;
+}
+.hljs-ansi-foreground-cyan .hljs-ansi-style-bold,
+.hljs-ansi-foreground-cyan.hljs-ansi-style-bold {
+  color: var(--ansi-14) !important;
+}
+.hljs-ansi-foreground-white .hljs-ansi-style-bold,
+.hljs-ansi-foreground-white.hljs-ansi-style-bold {
+  color: var(--ansi-15) !important;
+}
+.hljs-ansi-background-black {
+  background-color: var(--ansi-0) !important;
+}
+.hljs-ansi-background-red {
+  background-color: var(--ansi-1) !important;
+}
+.hljs-ansi-background-green {
+  background-color: var(--ansi-2) !important;
+}
+.hljs-ansi-background-yellow {
+  background-color: var(--ansi-3) !important;
+}
+.hljs-ansi-background-blue {
+  background-color: var(--ansi-4) !important;
+}
+.hljs-ansi-background-magenta {
+  background-color: var(--ansi-5) !important;
+}
+.hljs-ansi-background-cyan {
+  background-color: var(--ansi-6) !important;
+}
+.hljs-ansi-background-white {
+  background-color: var(--ansi-7) !important;
+}

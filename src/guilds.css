@@ -154,17 +154,40 @@
             width: 38.41px;
             height: 38.41px;
             padding: 4.8px;
-
-            /*mask-image: var(--ImageFolderClosed);
+            mask-image: var(--ImageFolderClosed);
             mask-repeat: no-repeat;
             mask-position: center;
-            mask-mode: luminance;*/
-            background-image: var(--ImageFolderClosed);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-color: transparent !important;
+            mask-size: 38.41px;
+            -webkit-mask-image: var(--ImageFolderClosed);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            -webkit-mask-size: 38.41px;
             background-size: 38.41px;
             image-rendering: pixelated;
+
+            &::before,
+            &::after {
+              position: absolute;
+              content: "";
+              display: block;
+              width: 38.41px;
+              height: 38.41px;
+
+              mask-image: var(--ImageFolderClosed);
+              mask-repeat: no-repeat;
+              mask-position: center;
+              mask-size: 38.41px;
+              -webkit-mask-image: var(--ImageFolderClosed);
+              -webkit-mask-repeat: no-repeat;
+              -webkit-mask-position: center;
+              -webkit-mask-size: 38.41px;
+              /*background-image: var(--ImageFolderClosed);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-color: transparent !important;*/
+              background-size: 38.41px;
+              background-color: inherit;
+            }
 
             &:has(
                 [class^="expandedFolderIconWrapper_"]:not([style^="transform:"])
@@ -173,26 +196,108 @@
             }
 
             [class^="closedFolderIconWrapper_"] {
-              display: none;
+              width: 38.41px;
+              height: 38.41px;
+              padding: 0;
+              background-color: inherit;
+              display: block;
+
+              &::before {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 38.41px;
+                height: 38.41px;
+
+                mask-image: var(--ImageFolderClosed);
+                mask-repeat: no-repeat;
+                mask-position: center;
+                mask-size: 38.41px;
+                -webkit-mask-image: var(--ImageFolderClosed);
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-position: center;
+                -webkit-mask-size: 38.41px;
+                /*background-image: var(--ImageFolderClosed);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: transparent !important;*/
+                background-size: 38.41px;
+                background-color: inherit;
+              }
+              &::after {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 38.41px;
+                height: 38.41px;
+
+                background-image: var(--ImageFolderClosedOverlay);
+                background-size: 38.41px;
+              }
+
+              & > [class^="icon_"] {
+                width: 38.41px;
+                height: 38.41px;
+                background-color: inherit;
+                background-image: none !important;
+                position: absolute;
+
+                &::before {
+                  position: absolute;
+                  content: "";
+                  display: block;
+                  width: 38.41px;
+                  height: 38.41px;
+
+                  mask-image: var(--ImageFolderClosed);
+                  mask-repeat: no-repeat;
+                  mask-position: center;
+                  mask-size: 38.41px;
+                  -webkit-mask-image: var(--ImageFolderClosed);
+                  -webkit-mask-repeat: no-repeat;
+                  -webkit-mask-position: center;
+                  -webkit-mask-size: 38.41px;
+                  /*background-image: var(--ImageFolderClosed);
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-color: transparent !important;*/
+                  background-size: 38.41px;
+                  background-color: inherit;
+                }
+              }
             }
 
             [class^="expandedFolderIconWrapper_"] {
               width: unset;
               height: unset;
+
+              &::after {
+                content: "";
+                position: absolute;
+                width: 38.41px;
+                height: 38.41px;
+                background-image: var(--ImageFolderOpenOverlay);
+                background-size: 38.41px;
+              }
+
               & > svg {
                 width: 38.41px;
                 height: 38.41px;
 
                 background-color: currentColor;
 
-                /*mask-image: var(--ImageFolderOpen);
+                mask-image: var(--ImageFolderOpen);
                 mask-repeat: no-repeat;
                 mask-position: center;
-                mask-mode: luminance;*/
-                background-image: var(--ImageFolderOpen);
+                mask-size: 38.41px;
+                -webkit-mask-image: var(--ImageFolderOpen);
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-position: center;
+                -webkit-mask-size: 38.41px;
+                /*background-image: var(--ImageFolderOpen);
                 background-repeat: no-repeat;
                 background-position: center;
-                background-color: transparent !important;
+                background-color: transparent !important;*/
                 background-size: 38.41px;
                 image-rendering: pixelated;
 

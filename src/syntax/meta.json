@@ -1,0 +1,10 @@
+{
+  "name": "Codeblock Color Scheme",
+  "optionNames": {
+    "dos": {
+      "name": "MS-DOS",
+      "default": true
+    },
+    "amora_focus": "Amora Focus"
+  }
+}

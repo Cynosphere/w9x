@@ -1,0 +1,53 @@
+[class*="botTag_"] {
+  font-size: 0%;
+  padding: 0 !important;
+  background: none !important;
+}
+
+[class*="botTag_"]:not([class*="botTagCompact_"]) {
+  margin-left: 6px;
+}
+
+[class*="botTag_"] [class*="botText_"] {
+  font-size: 0;
+  display: none;
+}
+
+:not([class^="repliedMessage_"]) [class*="botTagCompact_"] {
+  margin-right: -6px !important;
+}
+[class^="repliedMessage_"] [class*="botTagCompact_"] {
+  margin-right: 4px !important;
+  margin-left: 4px !important;
+}
+
+[class*="botTag_"] svg[class^="botTagVerified_"] {
+  width: 16px;
+  height: 16px;
+  background-image: var(--ImageVerified);
+}
+
+[class*="botTag_"] svg[class^="botTagVerified_"] > path {
+  display: none;
+}
+
+[class*="botTag_"]:after {
+  visibility: visible;
+  content: "";
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  position: relative;
+  top: 1px;
+  margin-left: 0;
+  background-image: var(--ImageBot);
+  background-size: 16px 16px;
+}
+
+[class*="message_"] [class*="botTag_"] {
+  top: 2px !important;
+}
+
+[class^="repliedMessage_"] [class*="botTagCompact_"]:after {
+  top: 1px !important;
+}

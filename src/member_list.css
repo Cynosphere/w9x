@@ -1,0 +1,19 @@
+[class^="chat_"] > [class^="content_"] {
+  &::before {
+    display: none;
+  }
+
+  & > [class^="container_"] + [class^="container_"] {
+    border-left: 4px solid var(--ThreeDFace);
+    padding: 2px;
+    box-shadow: var(--InnerEdge);
+    background-color: var(--Window);
+    height: calc(100% - 4px);
+
+    [class^="membersWrap_"] {
+      & > [class^="members_"] {
+        background-color: transparent;
+      }
+    }
+  }
+}

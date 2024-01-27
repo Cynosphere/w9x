@@ -5,6 +5,7 @@
       "name": "MS Sans Serif",
       "default": true
     },
-    "terminus": "Terminus"
+    "terminus": "Terminus",
+    "tahoma": "Tahoma"
   }
 }

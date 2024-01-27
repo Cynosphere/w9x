@@ -1,0 +1,22 @@
+:root {
+  --ansi-0: #000000;
+  --ansi-1: #800000;
+  --ansi-2: #008000;
+  --ansi-3: #808000;
+  --ansi-4: #000080;
+  --ansi-5: #800080;
+  --ansi-6: #008080;
+  --ansi-7: #c0c0c0;
+
+  --ansi-8: #808080;
+  --ansi-9: #ff0000;
+  --ansi-10: #00ff00;
+  --ansi-11: #ffff00;
+  --ansi-12: #0000ff;
+  --ansi-13: #ff00ff;
+  --ansi-14: #00ffff;
+  --ansi-15: #ffffff;
+
+  --ansi-foreground: #ffffff;
+  --ansi-background: #000000;
+}

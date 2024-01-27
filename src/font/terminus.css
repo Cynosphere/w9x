@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Unifont";
   src: local("Unifont"),
-    url(https://cynosphere.gitlab.io/Customizations/discord/assets/unifont-14.0.01.ttf)
+    url("https://cynosphere.gitlab.io/Customizations/discord/assets/unifont-14.0.01.ttf")
       format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -10,7 +10,7 @@
 @font-face {
   font-family: "Terminus (TTF)";
   src: local("Terminus (TTF)"),
-    url(https://cynosphere.gitlab.io/Customizations/discord/assets/TerminusTTF-4.47.0.ttf)
+    url("https://cynosphere.gitlab.io/Customizations/discord/assets/TerminusTTF-4.47.0.ttf")
       format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -18,7 +18,7 @@
 @font-face {
   font-family: "Terminus (TTF)";
   src: local("Terminus (TTF)"),
-    url(https://cynosphere.gitlab.io/Customizations/discord/assets/TerminusTTF-Bold-4.47.0.ttf)
+    url("https://cynosphere.gitlab.io/Customizations/discord/assets/TerminusTTF-Bold-4.47.0.ttf")
       format("truetype");
   font-weight: bold;
   font-style: normal;
@@ -26,7 +26,7 @@
 @font-face {
   font-family: "Terminus (TTF)";
   src: local("Terminus (TTF)"),
-    url(https://cynosphere.gitlab.io/Customizations/discord/assets/TerminusTTF-Bold%20Italic-4.47.0.ttf)
+    url("https://cynosphere.gitlab.io/Customizations/discord/assets/TerminusTTF-Bold%20Italic-4.47.0.ttf")
       format("truetype");
   font-weight: bold;
   font-style: italic;
@@ -34,7 +34,7 @@
 @font-face {
   font-family: "Terminus (TTF)";
   src: local("Terminus (TTF)"),
-    url(https://cynosphere.gitlab.io/Customizations/discord/assets/TerminusTTF-Italic-4.47.0.ttf)
+    url("https://cynosphere.gitlab.io/Customizations/discord/assets/TerminusTTF-Italic-4.47.0.ttf")
       format("truetype");
   font-weight: normal;
   font-style: italic;
@@ -47,8 +47,6 @@
     "Sazanami Gothic", "UnifontBitmap", "Unifont Windows", "Unifont", monospace !important;
   --font-headline: "Terminus (TTF) for Windows", "Terminus (TTF)",
     "Sazanami Gothic", "UnifontBitmap", "Unifont Windows", "Unifont", monospace !important;
-  --font-code: "Terminus (TTF) for Windows", "Terminus (TTF)", "Sazanami Gothic",
-    "UnifontBitmap", "Unifont Windows", "Unifont", monospace !important;
 
   --FontSize: 12px;
   --TitlebarOffset: 2px;
@@ -72,16 +70,6 @@
   font-size: 16px;
   text-transform: none !important;
   font-weight: 500;
-}
-[class^="containerDefault_"]
-  > [class^="iconVisibility_"]
-  > [class^="mainContent_"]
-  [class^="name_"],
-[class^="membersGroup_"],
-[class^="headerContent_"] > [class^="name_"] {
-  font-size: 16px;
-  text-transform: none !important;
-  font-weight: 600;
 }
 
 [class^="reaction_"] [class*="reactionCount_"] {
@@ -115,30 +103,6 @@ span[class="role-tag"],
 [class^="asianCompactTimeStamp_"],
 [class^="embedFooterText_"] {
   font-size: 0.75em !important;
-}
-
-[class^="codeBlockText_"],
-[class^="codeLine_"],
-[class*="after_inlineCode_"],
-[class*="before_inlineCode_"],
-[class^="inlineCode_"] {
-  font-size: 12px !important;
-}
-
-.hljs-ansi-style-bold {
-  font-weight: 0;
-}
-
-[class^="markdown_"] [class^="codeInline_"],
-code.inline,
-.hljs {
-  font-size: 12px !important;
-}
-
-[class^="markdown_"] code,
-[class^="markdown_"] [class^="codeInline_"],
-code.inline {
-  line-height: 12px !important;
 }
 
 [class^="markup_"] ol,

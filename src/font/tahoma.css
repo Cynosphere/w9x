@@ -1,0 +1,18 @@
+:root {
+  --font-display: "Tahoma" !important;
+  --font-primary: "Tahoma" !important;
+  --font-headline: "Tahoma" !important;
+
+  --FontSize: 8pt;
+  --TitlebarOffset: 3px;
+
+  /* Toolbar offsets, these need to be hardcoded as theres no way to get another element's width in CSS */
+  /* Padding included */
+  --ToolbarAccountWidth: 51px;
+  --ToolbarSettingsWidth: 51px;
+  --ToolbarHelpWidth: 33px;
+
+  --ToolbarAccountTextOffset: 1px;
+  --ToolbarHelpTextOffset: -8px;
+  --ToolbarUpdateTextOffset: -8px;
+}
