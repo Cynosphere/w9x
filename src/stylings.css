@@ -1,24 +1,13 @@
 :root {
-  --WindowFrame: inset -1px -1px 0 0 var(--ThreeDDarkShadow),
-    inset 1px 1px 0 0 var(--ThreeDLightShadow),
-    inset -2px -2px 0 0 var(--ThreeDShadow),
-    inset 2px 2px 0 0 var(--ThreeDHighlight);
-  --OuterEdge: inset -1px -1px 0 0 var(--ThreeDDarkShadow),
-    inset 1px 1px 0 0 var(--ThreeDHighlight),
-    inset -2px -2px 0 0 var(--ThreeDShadow),
-    inset 2px 2px 0 0 var(--ThreeDLightShadow);
-  --InnerEdge: inset -1px -1px 0 0 var(--ThreeDHighlight),
-    inset 1px 1px 0 0 var(--ThreeDShadow),
-    inset -2px -2px 0 0 var(--ThreeDLightShadow),
-    inset 2px 2px 0 0 var(--ThreeDDarkShadow);
-  --RebarBorder: inset 1px 1px 0 0 var(--ThreeDShadow),
-    inset 2px 2px 0 0 var(--ThreeDHighlight),
-    inset -1px -1px 0 0 var(--ThreeDHighlight),
-    inset -2px -2px 0 0 var(--ThreeDShadow);
-  --RebarBottom: inset 0 -1px 0 0 var(--ThreeDHighlight),
-    inset 0 -2px 0 0 var(--ThreeDShadow);
-  --HoverEdge: inset -1px -1px 0 0 var(--ThreeDShadow),
-    inset 1px 1px 0 0 var(--ThreeDHighlight);
-  --PressedEdge: inset -1px -1px 0 0 var(--ThreeDHighlight),
-    inset 1px 1px 0 0 var(--ThreeDShadow);
+  --WindowFrame: inset -1px -1px 0 0 var(--ThreeDDarkShadow), inset 1px 1px 0 0 var(--ThreeDLightShadow),
+    inset -2px -2px 0 0 var(--ThreeDShadow), inset 2px 2px 0 0 var(--ThreeDHighlight);
+  --OuterEdge: inset -1px -1px 0 0 var(--ThreeDDarkShadow), inset 1px 1px 0 0 var(--ThreeDHighlight),
+    inset -2px -2px 0 0 var(--ThreeDShadow), inset 2px 2px 0 0 var(--ThreeDLightShadow);
+  --InnerEdge: inset -1px -1px 0 0 var(--ThreeDHighlight), inset 1px 1px 0 0 var(--ThreeDShadow),
+    inset -2px -2px 0 0 var(--ThreeDLightShadow), inset 2px 2px 0 0 var(--ThreeDDarkShadow);
+  --RebarBorder: inset 1px 1px 0 0 var(--ThreeDShadow), inset 2px 2px 0 0 var(--ThreeDHighlight),
+    inset -1px -1px 0 0 var(--ThreeDHighlight), inset -2px -2px 0 0 var(--ThreeDShadow);
+  --RebarBottom: inset 0 -1px 0 0 var(--ThreeDHighlight), inset 0 -2px 0 0 var(--ThreeDShadow);
+  --HoverEdge: inset -1px -1px 0 0 var(--ThreeDShadow), inset 1px 1px 0 0 var(--ThreeDHighlight);
+  --PressedEdge: inset -1px -1px 0 0 var(--ThreeDHighlight), inset 1px 1px 0 0 var(--ThreeDShadow);
 }

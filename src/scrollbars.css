@@ -22,23 +22,16 @@
   }
 
   &::-webkit-scrollbar-button:single-button:active {
-    box-shadow: inset 1px 1px var(--ThreeDShadow),
-      inset -1px -1px var(--ThreeDShadow) !important;
+    box-shadow: inset 1px 1px var(--ThreeDShadow), inset -1px -1px var(--ThreeDShadow) !important;
   }
 }
 
-:is(
-    [class^="scroller_"],
-    [class*="scrollerBase_"]
-  )::-webkit-scrollbar-button:single-button:vertical:decrement {
+:is([class^="scroller_"], [class*="scrollerBase_"])::-webkit-scrollbar-button:single-button:vertical:decrement {
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-image: var(--ImageScrollbarUp) !important;
 }
-:is(
-    [class^="scroller_"],
-    [class*="scrollerBase_"]
-  )::-webkit-scrollbar-button:single-button:vertical:increment {
+:is([class^="scroller_"], [class*="scrollerBase_"])::-webkit-scrollbar-button:single-button:vertical:increment {
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-image: var(--ImageScrollbarDown) !important;

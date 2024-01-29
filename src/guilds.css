@@ -96,6 +96,18 @@
           display: none;
         }
       }
+      &:has(
+          > [class^="iconBadge_"]
+            > svg
+            > g
+            > path[d="M4.92871 13.4149L10.5857 19.0709L18.3639 11.2927C19.7781 9.87859 22.6066 6.48376 21.1923 2.80748C17.5153 1.3932 14.1213 4.22173 12.7074 5.63625L4.92871 13.4149ZM16.064 9.93309C17.1686 9.93309 18.064 9.03766 18.064 7.93309C18.064 6.82852 17.1686 5.93309 16.064 5.93309C14.9594 5.93309 14.064 6.82852 14.064 7.93309C14.064 9.03766 14.9594 9.93309 16.064 9.93309Z"]
+        ) {
+        background-image: var(--ImageJoystick);
+
+        & > [class^="iconBadge_"] {
+          display: none;
+        }
+      }
     }
 
     & > [class^="guildSeparator_"] {
@@ -128,11 +140,9 @@
     }
 
     [class*="selected_"] > [class^="wrapper_"]:has(> svg) {
-      box-shadow: inset -1px -1px 0 0 var(--ThreeDHighlight),
-        inset 1px 1px 0 0 var(--ThreeDShadow);
+      box-shadow: inset -1px -1px 0 0 var(--ThreeDHighlight), inset 1px 1px 0 0 var(--ThreeDShadow);
       &:hover {
-        box-shadow: inset -1px -1px 0 0 var(--ThreeDHighlight),
-          inset 1px 1px 0 0 var(--ThreeDShadow);
+        box-shadow: inset -1px -1px 0 0 var(--ThreeDHighlight), inset 1px 1px 0 0 var(--ThreeDShadow);
       }
     }
 
@@ -189,9 +199,7 @@
               background-color: inherit;
             }
 
-            &:has(
-                [class^="expandedFolderIconWrapper_"]:not([style^="transform:"])
-              ) {
+            &:has([class^="expandedFolderIconWrapper_"]:not([style^="transform:"])) {
               background-image: none;
             }
 
@@ -318,8 +326,7 @@
       }
 
       &:hover {
-        box-shadow: inset -1px -1px 0 0 var(--ThreeDShadow),
-          inset 1px 1px 0 0 var(--ThreeDHighlight);
+        box-shadow: inset -1px -1px 0 0 var(--ThreeDShadow), inset 1px 1px 0 0 var(--ThreeDHighlight);
       }
     }
     [class^="wrapperSimple_"] {
@@ -339,8 +346,7 @@
     [class^="circleIconButton_"] {
       background-color: transparent;
       &:hover {
-        box-shadow: inset -1px -1px 0 0 var(--ThreeDShadow),
-          inset 1px 1px 0 0 var(--ThreeDHighlight);
+        box-shadow: inset -1px -1px 0 0 var(--ThreeDShadow), inset 1px 1px 0 0 var(--ThreeDHighlight);
       }
     }
 
@@ -425,18 +431,15 @@
         image-rendering: pixelated;
       }
       &:has([class^="folder_"][aria-expanded="true"]) {
-        box-shadow: inset -1px -1px 0 0 var(--ThreeDShadow),
-          inset 1px 1px 0 0 var(--ThreeDHighlight);
+        box-shadow: inset -1px -1px 0 0 var(--ThreeDShadow), inset 1px 1px 0 0 var(--ThreeDHighlight);
       }
 
       &:hover::after {
-        box-shadow: inset 0 1px var(--ThreeDShadow),
-          inset -1px -1px 0 0 var(--ThreeDShadow),
+        box-shadow: inset 0 1px var(--ThreeDShadow), inset -1px -1px 0 0 var(--ThreeDShadow),
           inset 1px 2px 0 0 var(--ThreeDHighlight);
       }
       &:has([class^="folder_"][aria-expanded="true"])::after {
-        box-shadow: inset 0 1px var(--ThreeDShadow),
-          inset -1px -1px 0 0 var(--ThreeDHighlight),
+        box-shadow: inset 0 1px var(--ThreeDShadow), inset -1px -1px 0 0 var(--ThreeDHighlight),
           inset 1px 2px 0 0 var(--ThreeDShadow);
       }
     }

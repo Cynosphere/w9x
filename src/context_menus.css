@@ -32,19 +32,15 @@
         color: var(--SelectionText);
 
         &[aria-haspopup="true"] > [class^="iconContainer_"]::before,
-        &[role="menuitemcheckbox"][aria-checked="true"]
-          > [class^="iconContainer_"]::before,
-        &[role="menuitemradio"][aria-checked="true"]
-          > [class^="iconContainer_"]::before {
+        &[role="menuitemcheckbox"][aria-checked="true"] > [class^="iconContainer_"]::before,
+        &[role="menuitemradio"][aria-checked="true"] > [class^="iconContainer_"]::before {
           background-color: var(--SelectionText);
         }
       }
 
-      &:not(:has(> [class^="iconContainer_"] > [class^="icon_"])):not(
-          :has(> [class^="iconContainerLeft_"])
-        ):not(:has(> [class^="statusItem_"])):not(
-          :has([class^="userMenuItem_"])
-        ) {
+      &:not(:has(> [class^="iconContainer_"] > [class^="icon_"])):not(:has(> [class^="iconContainerLeft_"])):not(
+          :has(> [class^="statusItem_"])
+        ):not(:has([class^="userMenuItem_"])) {
         padding-inline-start: 20px !important;
       }
       &:has(> [class^="iconContainer_"] > [class^="icon_"]) {
@@ -103,13 +99,10 @@
         -webkit-mask-position: center;
       }
 
-      &[role="menuitemcheckbox"]
-        > [class^="iconContainer_"]
-        > svg[class^="icon_"] {
+      &[role="menuitemcheckbox"] > [class^="iconContainer_"] > svg[class^="icon_"] {
         display: none;
       }
-      &[role="menuitemcheckbox"][aria-checked="true"]
-        > [class^="iconContainer_"]::before {
+      &[role="menuitemcheckbox"][aria-checked="true"] > [class^="iconContainer_"]::before {
         content: "";
         position: absolute;
         right: 0px;
@@ -125,13 +118,10 @@
         -webkit-mask-position: center;
       }
 
-      &[role="menuitemradio"]
-        > [class^="iconContainer_"]
-        > svg[class^="icon_"] {
+      &[role="menuitemradio"] > [class^="iconContainer_"] > svg[class^="icon_"] {
         display: none;
       }
-      &[role="menuitemradio"][aria-checked="true"]
-        > [class^="iconContainer_"]::before {
+      &[role="menuitemradio"][aria-checked="true"] > [class^="iconContainer_"]::before {
         content: "";
         position: absolute;
         right: -1px;

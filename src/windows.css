@@ -9,11 +9,7 @@
     [class^="typeWindows_"] {
       margin-top: 0 !important;
       border-bottom: 1px solid var(--ThreeDFace);
-      background: linear-gradient(
-        to right,
-        var(--InactiveTitleStart),
-        var(--InactiveTitleEnd)
-      ) !important;
+      background: linear-gradient(to right, var(--InactiveTitleStart), var(--InactiveTitleEnd)) !important;
 
       [class^="wordmarkWindows_"] {
         width: 16px !important;
@@ -87,11 +83,7 @@
   }
 
   &.app-focused #app-mount [class^="typeWindows_"] {
-    background: linear-gradient(
-      to right,
-      var(--ActiveTitleStart),
-      var(--ActiveTitleEnd)
-    ) !important;
+    background: linear-gradient(to right, var(--ActiveTitleStart), var(--ActiveTitleEnd)) !important;
 
     [class^="wordmarkWindows_"]::after {
       color: var(--ActiveTitleText) !important;

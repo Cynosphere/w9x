@@ -1,5 +1,6 @@
 {
     "semi": true,
     "bracketSpacing": false,
-    "endOfLine": "lf"
+    "endOfLine": "lf",
+    "printWidth": 120
 }

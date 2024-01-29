@@ -19,26 +19,15 @@
   [class*="header_"]
   [class*="avatar_"]
   [class*="wrapper_"],
-[class^="messagesWrapper_"]
-  [class^="scrollerInner_"]
-  [class^="message_"]
-  [class*="contents_"]
-  [class*="avatar_"],
-[class^="messagesWrapper_"]
-  [class^="scrollerInner_"]
-  [class^="wrapper_"]
-  [class*="contents_"]
-  [class*="avatar_"],
+[class^="messagesWrapper_"] [class^="scrollerInner_"] [class^="message_"] [class*="contents_"] [class*="avatar_"],
+[class^="messagesWrapper_"] [class^="scrollerInner_"] [class^="wrapper_"] [class*="contents_"] [class*="avatar_"],
 [class^="messageGroupCozy_"] [class*="contents_"] [class*="avatar_"],
 [class*="autocomplete_"]
   [class*="autocompleteInner_"]
   [class*="autocompleteRow_"]
   [class*="content_"]
   [class*="wrapper_"],
-[class*="guildsWrapper_"]
-  [class*="guilds_"]
-  [class*="guild_"]
-  [class*="guildInner_"],
+[class*="guildsWrapper_"] [class*="guilds_"] [class*="guild_"] [class*="guildInner_"],
 div[class^="listItem_"] foreignObject img,
 div[class^="listItem_"] foreignObject a[class^="button_"],
 div[class^="listItem_"] foreignObject [class^="childWrapper_"],
@@ -48,9 +37,7 @@ div[class^="listItem_"] div[class^="wrapperSimple_"],
 [class^="folderIconWrapper_"],
 [class^="avatarContainer_"],
 [class^="executedCommandAvatar_"],
-[class^="folderIconWrapper_"]
-  > [class^="closedFolderIconWrapper_"]
-  > [class^="icon_"],
+[class^="folderIconWrapper_"] > [class^="closedFolderIconWrapper_"] > [class^="icon_"],
 [class^="embedAuthorIcon_"] {
   border-radius: 0% !important;
 }
