@@ -3,8 +3,8 @@
 <!-- prettier-ignore -->
 > [!WARNING]
 > I am releasing this early in an unfinished state because I do not want to be seen as a gatekeeper.
-> I do not have the consistent motivation to be able to work on this because roadblocks tend to kill my motivation with anything.
-> PRs are welcome if you wish to contribute, but I will still continue to work on this as I find motivation to do so.
+> I do not have the consistent motivation to be able to work on this consistently.
+> PRs are welcome if you wish to contribute. I will still continue to work on this as I find motivation to do so.
 
 <!-- prettier-ignore -->
 > [!CAUTION]
