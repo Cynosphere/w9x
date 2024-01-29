@@ -12,6 +12,16 @@ const metaRemap = {
   updateUrl: "updateURL",
 };
 
+function logInfo(...args) {
+  console.log("\x1b[36m[INFO] \x1b[0m" + [...args].map((m) => m?.toString()).join(" "));
+}
+function logWarn(...args) {
+  console.log("\x1b[33m[WARN] \x1b[0m" + [...args].map((m) => m?.toString()).join(" "));
+}
+function logError(...args) {
+  console.error("\x1b[31m[ERROR] \x1b[0m" + [...args].map((m) => m?.toString()).join(" "));
+}
+
 function asyncExec(command, options = {}) {
   return new Promise((resolve, reject) => {
     exec(command, options, (err, stdout) => {
@@ -31,9 +41,7 @@ async function generateHeader() {
   // Dump keys from meta.json
   for (const key of Object.keys(userstyleMeta)) {
     const val = userstyleMeta[key];
-    out.push(
-      metaRemap[key] != null ? `@${metaRemap[key]} ${val}` : `@${key} ${val}`
-    );
+    out.push(metaRemap[key] != null ? `@${metaRemap[key]} ${val}` : `@${key} ${val}`);
   }
 
   // We only support USO
@@ -74,7 +82,7 @@ async function generateSections() {
         meta = JSON.parse(contents);
       } catch (err) {
         if (err.code == "ENOENT") {
-          console.log(`Skipping "${file.name}" as it has no meta.json`);
+          logInfo(`Skipping "${file.name}" as it has no meta.json`);
           continue;
         } else {
           throw err;
@@ -88,7 +96,7 @@ async function generateSections() {
       const lines = [`@var select ${file.name} '${meta.name}' {`];
 
       if (meta.optional) {
-        lines.push("  'Off':\"\",");
+        lines.push(`  '${meta.optionalName ?? "Off"}${meta.optionalDefault ? "*" : ""}':"",`);
       }
 
       for (const filename of Object.keys(meta.optionNames)) {
@@ -102,9 +110,7 @@ async function generateSections() {
           contents = contents.replace(/\/\*.*?\*\//gis, "");
         } catch (err) {
           if (err.code == "ENOENT") {
-            console.error(
-              `Defined option name for "${filename}", but file doesn't exist!`
-            );
+            logError(`Defined option name for "${filename}", but file doesn't exist!`);
             continue;
           } else {
             throw err;
@@ -116,9 +122,9 @@ async function generateSections() {
         if (typeof name === "string") {
           lines.push(`  '${name}':\`${contents}\`,`);
         } else if (name.name) {
-          lines.push(
-            `  '${name.name}${name.default ? "*" : ""}':\`${contents}\`,`
-          );
+          if (meta.optionalDefault && name.default)
+            logWarn(`Option "${name.name}" is set as default, but optionalDefault is true!`);
+          lines.push(`  '${name.name}${!meta.optionalDefault && name.default ? "*" : ""}':\`${contents}\`,`);
         }
       }
 
@@ -126,10 +132,7 @@ async function generateSections() {
 
       out.configurable.push(lines.join("\n"));
     } else if (file.name.endsWith(".css")) {
-      const contents = await readFile(
-        join(__dirname, "src", file.name),
-        "utf8"
-      );
+      const contents = await readFile(join(__dirname, "src", file.name), "utf8");
       out.static.push("/* {{{ " + file.name + " */\n" + contents + "/* }}} */");
     }
   }
