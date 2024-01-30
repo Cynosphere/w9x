@@ -10,4 +10,5 @@
   --RebarBottom: inset 0 -1px 0 0 var(--ThreeDHighlight), inset 0 -2px 0 0 var(--ThreeDShadow);
   --HoverEdge: inset -1px -1px 0 0 var(--ThreeDShadow), inset 1px 1px 0 0 var(--ThreeDHighlight);
   --PressedEdge: inset -1px -1px 0 0 var(--ThreeDHighlight), inset 1px 1px 0 0 var(--ThreeDShadow);
+  --ProgressBar: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14"><rect x="1" y="1" height="12" width="8" fill="black"></rect></svg>');
 }

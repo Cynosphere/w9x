@@ -20,10 +20,12 @@
         & > [class^="headerContent_"] {
           height: 20px !important;
           padding-left: 6px;
+
           & > [class*="name_"] {
             font-weight: normal;
             font-size: var(--FontSize);
           }
+
           & > [class^="headerChildren_"] {
             width: 20px;
             height: 18px;
@@ -40,6 +42,10 @@
             & > svg {
               display: none;
             }
+          }
+
+          & > [class^="guildIconV2Container_"] {
+            margin-right: 2px;
           }
         }
       }
@@ -74,6 +80,63 @@
         & > div[style="height: 0px;"] + div[style="height: 12px;"],
         & > [class^="sectionDivider"] + div[style="height: 12px;"] {
           height: 0px !important;
+        }
+
+        [class^="container_"]:has(> [class^="progressBarContainer_"]) {
+          padding: 0;
+          margin: 3px 2px;
+
+          &::after {
+            left: 0;
+            height: 1px;
+            border-bottom: solid 1px var(--ThreeDHighlight);
+            background-color: var(--ThreeDShadow);
+            width: 100%;
+          }
+
+          & > [class^="textArea_"] {
+            margin: 0;
+            height: unset;
+
+            & > [class^="goalTextContainer_"],
+            & > [class^="progressFraction_"] {
+              & > [data-text-variant] {
+                color: var(--WindowText) !important;
+                font-size: var(--FontSize);
+              }
+            }
+
+            & > [class^="progressFraction_"] > [class^="count_"] {
+              display: none;
+            }
+          }
+
+          & > [class^="progressBarContainer_"] {
+            margin: 0;
+            margin-bottom: 3px;
+            border-radius: 0;
+            border: 1px solid transparent;
+            border-top-color: var(--ThreeDShadow);
+            border-left-color: var(--ThreeDShadow);
+            border-bottom-color: var(--ThreeDHighlight);
+            border-right-color: var(--ThreeDHighlight);
+            background-color: var(--ThreeDFace);
+            height: 14px;
+            width: calc(100% - 2px);
+
+            & > [class^="progressBar_"] {
+              height: 100%;
+              border-radius: 0;
+              background-color: var(--Selection);
+              background-image: none;
+              mask: var(--ProgressBar);
+              mask-repeat: repeat-x;
+            }
+
+            & > [class^="tadaIcon_"] {
+              display: none;
+            }
+          }
         }
 
         [class^="sectionDivider_"] {
@@ -558,5 +621,16 @@
 
   [class^="container_"] [class^="containerDefault_"]::before {
     border-color: var(--ThreeDShadow) !important;
+  }
+}
+
+[class^="flowerStarContainer_"] {
+  & > [class^="flowerStar_"] > path {
+    display: none;
+  }
+
+  & > [class^="childContainer_"] > svg {
+    width: 16px;
+    height: 16px;
   }
 }
