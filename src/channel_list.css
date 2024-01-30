@@ -90,14 +90,6 @@
             height: 0 !important;
             top: 10px;
           }
-
-          &:has(~ [class^="containerDefault_"]:not(> [class*="clickable_"])))
-            + [class^="containerDefault_"]:has(> [class*="clickable_"])
-            > [class^="iconVisibility_"]
-            > [class^="mainContent_"]::before {
-            height: 10px;
-            top: -1px;
-          }
         }
 
         [class^="containerDefault_"] {
@@ -195,6 +187,9 @@
               font-size: 0;
               background-color: transparent !important;
               border-radius: 0;
+              width: 16px;
+              height: 16px;
+              top: 0px;
 
               &::after {
                 content: "";
@@ -214,13 +209,13 @@
             & > [class^="iconVisibility_"] > [class^="mainContent_"] {
               &::before {
                 content: "";
-                height: 14px;
+                height: 8px;
                 width: 8px;
                 border-left: 1px dotted;
                 border-bottom: 1px dotted;
                 border-color: var(--ThreeDHighlight);
                 position: absolute;
-                top: -5px;
+                top: 1px;
                 left: 9px;
               }
 
@@ -279,6 +274,14 @@
                   image-rendering: pixelated;
                 }
               }
+            }
+
+            &
+              ~ [class^="containerDefault_"]:has(> [class*="clickable_"])
+              > [class^="iconVisibility_"]
+              > [class^="mainContent_"]::before {
+              height: 14px;
+              top: -5px;
             }
 
             &
@@ -503,7 +506,7 @@
   }
 
   #guild-header-popout {
-    width: 236px;
+    width: 240px;
   }
 }
 

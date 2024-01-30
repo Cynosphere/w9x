@@ -25,9 +25,9 @@ html.platform-win {
     width: calc(100vw - 8px - var(--devtools-sidebar-width)) !important;
   }
   [class^="chat_"] > [class^="title_"] {
-    width: calc(100vw - 256px);
+    width: calc(100vw - 258px);
     [class^="toolbar_"] > [class^="search_"] {
-      left: calc(100vw - 240px - 68px);
+      left: calc(100vw - 242px - 68px);
     }
   }
 }
@@ -267,6 +267,16 @@ a[href="https://support.discord.com"]:has(> [class^="iconWrapper_"])
       display: none;
     }
   }
+
+  & > svg:has(> foreignObject[mask="url(#svg-mask-header-bar-badge)"]) + [class^="iconBadge_"] {
+    border-radius: 0;
+    background-color: transparent;
+    background-image: var(--ImageRedDot);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px;
+    image-rendering: pixelated;
+  }
 }
 
 html:not(.app-focused) {
@@ -331,7 +341,7 @@ html:not(.app-focused) {
   top: -26px;
   left: -302px;
   background-color: transparent;
-  width: calc(100vw - 248px);
+  width: calc(100vw - 250px);
 
   [class^="children_"] {
     height: 22px;
@@ -416,13 +426,13 @@ html:not(.app-focused) {
 
     & > [class^="search_"] {
       position: absolute;
-      left: calc(100vw - 240px - 60px);
+      left: calc(100vw - 242px - 60px);
       top: 24px;
       margin: 0;
 
       & > [class^="search_"] > [class^="searchBar_"] {
         height: 22px;
-        width: 240px;
+        width: 242px;
         border-radius: 0;
         background-color: var(--Window);
         box-shadow: var(--InnerEdge);
