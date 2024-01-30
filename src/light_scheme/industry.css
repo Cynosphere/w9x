@@ -1,0 +1,20 @@
+.theme-light {
+  --ThreeDLightShadow: #dbe2e3;
+  --ThreeDHighlight: #ffffff;
+  --ThreeDFace: #b7c7ca;
+  --ThreeDShadow: #729196;
+  --ThreeDDarkShadow: #212c2e;
+  --Window: #ffffff;
+  --WindowText: #000000;
+  --ActiveTitleStart: #212c2e;
+  --ActiveTitleEnd: #729196;
+  --ActiveTitleText: #ffffff;
+  --InactiveTitleStart: #9ca4a5;
+  --InactiveTitleEnd: #9ca4a5;
+  --InactiveTitleText: #ffffff;
+  --Selection: #212c2e;
+  --SelectionText: #ffffff;
+  --Tooltip: #ffffe1;
+  --TooltipText: #000000;
+  --Scrollbar: #b7c7ca;
+}

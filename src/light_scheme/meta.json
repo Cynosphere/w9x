@@ -6,6 +6,9 @@
       "default": true
     },
     "classic": "Windows Classic",
-    "95": "Windows 95"
+    "95": "Windows 95",
+    "slate": "Slate",
+    "plum": "Plum",
+    "industry": "Industry (OrthodoxWin32)"
   }
 }

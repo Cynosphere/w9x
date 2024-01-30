@@ -5,6 +5,12 @@
       "default": true,
       "name": "Midnight (Aseprite 95)"
     },
-    "amora_focus": "Amora Focus"
+    "amora_focus": "Amora Focus",
+    "vgui": "VGUI",
+    "source_tools": "Source Engine - Tools",
+    "moonlight": "moonlight",
+    "minty_skies": "Minty skies (Rsyclrs)",
+    "craft_dark": "Classic Dark (craft)",
+    "craft_dark_alt": "Classic Dark Alt (craft)"
   }
 }

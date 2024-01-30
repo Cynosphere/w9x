@@ -1,0 +1,20 @@
+.theme-dark {
+  --ThreeDLightShadow: #2b2f37;
+  --ThreeDHighlight: #8b94a5;
+  --ThreeDFace: #2b2f37;
+  --ThreeDShadow: #1c1f24;
+  --ThreeDDarkShadow: #404040;
+  --Window: #2b2f37;
+  --WindowText: #ffffff;
+  --ActiveTitleStart: #2b2f37;
+  --ActiveTitleEnd: #596171;
+  --ActiveTitleText: #ffffff;
+  --InactiveTitleStart: #1c1f24;
+  --InactiveTitleEnd: #1c1f24;
+  --InactiveTitleText: #878fa0;
+  --Selection: #1c1f24;
+  --SelectionText: #ffffff;
+  --Tooltip: #596171;
+  --TooltipText: #1c1f24;
+  --Scrollbar: #96a3ad;
+}

@@ -60,7 +60,7 @@
             top: 0;
             left: 0;
             position: absolute;
-            background: linear-gradient(0deg, var(--background-secondary) 5%, transparent 100%);
+            background: linear-gradient(to top, var(--ThreeDFace) 5%, transparent 100%);
           }
         }
       }
@@ -179,6 +179,16 @@
                 [class^="name_"] {
                   background-color: var(--Selection);
                   color: var(--SelectionText);
+                }
+              }
+            }
+            &[class*="modeMuted_"] {
+              [class^="link_"] {
+                background-color: transparent !important;
+
+                [class^="name_"] {
+                  color: var(--ThreeDShadow);
+                  text-shadow: 1px 1px 0 var(--ThreeDHighlight);
                 }
               }
             }

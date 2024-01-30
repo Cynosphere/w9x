@@ -36,6 +36,10 @@
         &[role="menuitemradio"][aria-checked="true"] > [class^="iconContainer_"]::before {
           background-color: var(--SelectionText);
         }
+
+        & > [class^="label_"] > [class^="subtext_"] {
+          color: var(--ThreeDHighlight) !important;
+        }
       }
 
       &:not(:has(> [class^="iconContainer_"] > [class^="icon_"])):not(:has(> [class^="iconContainerLeft_"])):not(
@@ -53,12 +57,27 @@
         margin-right: 2px;
       }
 
+      &[class*="disabled_"] {
+        opacity: 1;
+        & > [class^="label_"] {
+          color: var(--ThreeDShadow) !important;
+          text-shadow: 1px 1px 0 var(--ThreeDHighlight);
+
+          & > [class^="subtext_"] {
+            color: var(--ThreeDShadow) !important;
+            text-shadow: 1px 1px 0 var(--ThreeDHighlight);
+          }
+        }
+      }
+
       & > [class^="label_"] {
         padding-left: 2px;
 
         & > [class^="subtext_"] {
-          line-height: 12px;
+          line-height: var(--FontSize);
+          font-size: var(--FontSize);
           margin-top: 0;
+          color: var(--ThreeDShadow);
         }
       }
 
