@@ -17,7 +17,7 @@
         top: 5px !important;
         left: 6px !important;
         padding: 0 !important;
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACYSURBVDhPpZABDsAgCAN5uk/zZ45OahAnmqxJowi9OWVRKW2yyHDpdSILQQxTtVYCNpAQxnBUDtEGBgZEh1B7HQH+BnoyAbA/AjAwVgN4I7wHQGiaCWHoHKYwRHcxdBH+Lf91dbx+/gtoqiEf9uJD6nSA4FD9PpwFY5j6hrgwB3ZaASjMbGYAaIa4MFYCUGdeAMP9apeW9gDxfcZs7l81ZQAAAABJRU5ErkJggg==");
+        background-image: var(--ImageWindowIcon);
         background-repeat: no-repeat;
         &::after {
           font-family: var(--font-primary) !important;

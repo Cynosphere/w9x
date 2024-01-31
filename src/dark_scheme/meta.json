@@ -11,6 +11,12 @@
     "moonlight": "moonlight",
     "minty_skies": "Minty skies (Rsyclrs)",
     "craft_dark": "Classic Dark (craft)",
-    "craft_dark_alt": "Classic Dark Alt (craft)"
+    "craft_dark_alt": "Classic Dark Alt (craft)",
+    "monokai": "Monokai",
+    "monokai_pro": "Monokai Pro",
+    "monokai_octagon": "Monokai Octagon",
+    "monokai_machine": "Monokai Machine",
+    "monokai_ristretto": "Monokai Ristretto",
+    "monokai_spectrum": "Monokai Spectrum"
   }
 }

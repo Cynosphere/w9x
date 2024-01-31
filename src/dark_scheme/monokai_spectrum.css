@@ -1,0 +1,20 @@
+.theme-dark {
+  --ThreeDLightShadow: #222222;
+  --ThreeDHighlight: #363537;
+  --ThreeDFace: #222222;
+  --ThreeDShadow: #191919;
+  --ThreeDDarkShadow: #131313;
+  --Window: #222222;
+  --WindowText: #f7f1ff;
+  --ActiveTitleStart: #525053;
+  --ActiveTitleEnd: #69676c;
+  --ActiveTitleText: #f7f1ff;
+  --InactiveTitleStart: #191919;
+  --InactiveTitleEnd: #191919;
+  --InactiveTitleText: #363537;
+  --Selection: #8b888f;
+  --SelectionText: #f7f1ff;
+  --Tooltip: #222222;
+  --TooltipText: #f7f1ff;
+  --Scrollbar: #363537;
+}
