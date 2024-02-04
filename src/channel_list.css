@@ -305,7 +305,7 @@
                 background-color: var(--Window);
               }
 
-              & > svg[class^="arrow_"] {
+              & > svg {
                 top: 6px;
                 left: 6px;
                 width: 7px;
