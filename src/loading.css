@@ -1,0 +1,98 @@
+@keyframes BannerBar {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: 410px;
+  }
+}
+
+[class^="app_"] + [class^="container_"] {
+  padding: 0;
+  z-index: 9999;
+  margin: -4px;
+  background-color: var(--Desktop);
+  opacity: 1 !important;
+
+  & > [class^="problems_"] {
+    display: none;
+  }
+
+  & > [class^="content_"] {
+    width: 410px;
+    height: 117px;
+    background-color: var(--ThreeDFace);
+    box-shadow: var(--WindowFrame);
+    padding: 4px;
+    padding-top: 23px;
+    position: absolute;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      width: calc(100% - 8px);
+      height: 18px;
+      background: linear-gradient(to right, var(--ActiveTitleStart), var(--ActiveTitleEnd)) !important;
+    }
+
+    &::after {
+      content: "Please wait...";
+      position: absolute;
+      left: 6px;
+      top: 4px;
+      color: var(--ActiveTitleText);
+      font-size: var(--FontSize);
+      font-weight: bold;
+      line-height: 18px;
+    }
+
+    & > video {
+      display: none;
+    }
+
+    & > [class^="text_"] {
+      position: absolute;
+      top: 108px;
+      left: 16px;
+      width: calc(100% - 32px);
+      height: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -12px;
+        top: -85px;
+        background-image: var(--ImageBanner);
+        width: 410px;
+        height: 72px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: -12px;
+        top: -13px;
+        background-image: var(--ImageBannerBar);
+        width: 410px;
+        height: 5px;
+        animation: BannerBar 2s linear infinite;
+      }
+
+      & > [class^="tipTitle_"] {
+        display: none;
+      }
+      & > [class^="tip_"] {
+        color: var(--TextColor);
+        font-size: var(--FontSize);
+        line-height: 12px;
+        max-width: calc(100% - 32px);
+        text-align: left;
+      }
+    }
+  }
+}
