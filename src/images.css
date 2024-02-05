@@ -823,7 +823,8 @@ svg {
     background-size: 16px;
     image-rendering: pixelated;
 
-    & > g {
+    & > g,
+    & > path {
       display: none;
     }
   }

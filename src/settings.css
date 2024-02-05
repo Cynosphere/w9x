@@ -18,3 +18,263 @@
 [class*="layers_"] > [class*="layer_"][class*="animating_"] {
   will-change: unset !important;
 }
+
+[class^="layer_"]:has([class^="standardSidebarView_"]) {
+  transform: none !important;
+  z-index: 100;
+  background: transparent;
+}
+
+[class^="layer_"] [class^="standardSidebarView_"] {
+  width: 800px;
+  height: 600px;
+  left: calc(50vw - 400px);
+  top: calc(50vh - 300px);
+  padding: 8px;
+  padding-top: 27px;
+  box-shadow: var(--WindowFrame);
+  background-color: var(--ThreeDFace);
+  flex-direction: column;
+
+  &:has([class^="side_"] > [class^="info_"]) {
+    padding-bottom: 30px;
+
+    [class^="toolsContainer_"] {
+      bottom: 550px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: calc(100% - 8px);
+    height: 18px;
+    background: linear-gradient(to right, var(--InactiveTitleStart), var(--InactiveTitleEnd)) !important;
+  }
+
+  &::after {
+    content: "Settings - Discord";
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    color: var(--InactiveTitleText);
+    font-size: var(--FontSize);
+    font-weight: bold;
+    line-height: 18px;
+  }
+
+  & > [class^="sidebarRegion_"] {
+    flex: 0 1 auto;
+
+    & > [class^="sidebarRegionScroller_"] {
+      background-color: transparent;
+      max-width: 784px;
+      overflow: visible !important;
+      justify-content: flex-start;
+
+      &::-webkit-scrollbar,
+      &::-webkit-scrollbar-thumb,
+      &::-webkit-scrollbar-button,
+      &::-webkit-scrollbar-button:single-button,
+      &::-webkit-scrollbar-track {
+        visibility: hidden !important;
+        width: 0px !important;
+        min-width: 0px !important;
+      }
+
+      & > [class^="sidebar_"] {
+        padding: 0 2px;
+        overflow: visible;
+        width: unset;
+
+        & > [class^="side_"] {
+          flex-direction: row;
+          flex-wrap: wrap;
+
+          & > :is([class^="header_"], [class^="separator_"], [class^="socialLinks_"]) {
+            display: none;
+          }
+
+          & > [class*="item_"] {
+            padding: 0;
+            margin: 0;
+            font-size: var(--FontSize);
+            color: var(--WindowText);
+            background-color: var(--ThreeDFace);
+            border-radius: 0;
+            line-height: 19px;
+            padding: 0px 6px;
+            margin: 2px;
+            margin-top: 2px;
+            margin-bottom: 0;
+            width: unset;
+            flex: 1 0 auto;
+            text-align: center;
+            box-shadow: 0px -1px 0 var(--ThreeDLightShadow), 0px -2px 0 var(--ThreeDHighlight), 1px -2px 0 transparent,
+              1px 0px 0 var(--ThreeDShadow), 1px -1px 0 var(--ThreeDDarkShadow), 2px 0px 0 var(--ThreeDDarkShadow),
+              -1px 0px 0 var(--ThreeDLightShadow), -1px -1px 0 var(--ThreeDHighlight), -2px 0px 0 var(--ThreeDHighlight);
+
+            &:active {
+              color: var(--WindowText) !important;
+              background-color: var(--ThreeDFace) !important;
+            }
+
+            &[aria-selected="true"] {
+              color: var(--WindowText) !important;
+              background-color: var(--ThreeDFace) !important;
+              margin: 0px;
+              margin-bottom: -1px;
+              z-index: 10;
+              box-shadow: 0px -1px 0 var(--ThreeDLightShadow), 0px -2px 0 var(--ThreeDHighlight), 1px -2px 0 transparent,
+                1px 0px 0 var(--ThreeDShadow), 1px -1px 0 var(--ThreeDDarkShadow), 2px 0px 0 var(--ThreeDDarkShadow),
+                -1px 0px 0 var(--ThreeDLightShadow), -1px -1px 0 var(--ThreeDHighlight),
+                -2px 0px 0 var(--ThreeDHighlight), 0 1px 0 var(--ThreeDFace);
+            }
+
+            svg {
+              display: none;
+            }
+          }
+
+          & > [class^="info_"] {
+            padding: 0;
+            position: absolute;
+            top: 551px;
+            left: -4px;
+            display: flex;
+            height: 18px;
+            width: 792px;
+            border: 1px solid;
+            border-top-color: var(--ThreeDShadow);
+            border-left-color: var(--ThreeDShadow);
+            border-bottom-color: var(--ThreeDHighlight);
+            border-right-color: var(--ThreeDHighlight);
+
+            & > span {
+              font-size: var(--FontSize);
+              color: var(--WindowText) !important;
+              width: unset;
+              padding: 0 1px;
+              line-height: 16px;
+              margin-right: 6px;
+
+              &::after {
+                content: "";
+                display: block;
+                position: relative;
+                left: 100%;
+                top: -17px;
+                width: 4px;
+                height: 16px;
+                background-color: var(--ThreeDFace);
+                border: 1px solid var(--ThreeDFace);
+                border-left-color: var(--ThreeDHighlight);
+                border-right-color: var(--ThreeDShadow);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > [class^="contentRegion_"] {
+    padding: 6px;
+    box-shadow: var(--OuterEdge);
+    background-color: var(--ThreeDFace);
+    max-width: 784px;
+    min-height: 0;
+    flex: 1 1 auto;
+
+    & > [class^="contentTransitionWrap_"] {
+      max-width: 772px;
+      padding: 0px;
+      min-height: 0;
+
+      & > [class^="contentRegionScroller_"] {
+        background-color: var(--ThreeDFace);
+        min-height: 0;
+
+        & > [class^="contentColumn_"] {
+          padding: 0;
+          min-height: 0;
+
+          [class^="sectionTitle_"],
+          h2[class*="heading_"] {
+            display: none;
+          }
+        }
+      }
+    }
+
+    [class^="toolsContainer_"] {
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      right: -2px;
+      bottom: 572px;
+      width: 16px !important;
+      height: 14px !important;
+
+      & > [class^="tools_"] {
+        width: 16px !important;
+        height: 14px !important;
+
+        & > [class^="container_"] {
+          width: 16px !important;
+          height: 14px !important;
+
+          & > [class^="keybind_"] {
+            display: none;
+          }
+
+          & > [class^="closeButton_"] {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 16px !important;
+            height: 14px !important;
+            background: var(--ThreeDFace) !important;
+            box-shadow: var(--OuterEdge);
+            border: none;
+            border-radius: 0;
+
+            &:hover {
+              background-position: 16px 0px;
+              background-color: transparent;
+            }
+
+            &:active {
+              top: -1px;
+              box-shadow: var(--InnerEdge);
+            }
+
+            &::after {
+              width: 12px !important;
+              height: 10px !important;
+              background-color: var(--WindowText);
+              content: "";
+              -webkit-mask-image: var(--ImageClose);
+              mask-image: var(--ImageClose);
+            }
+
+            & > svg {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.app-focused [class^="layer_"] [class^="standardSidebarView_"] {
+  &::before {
+    background: linear-gradient(to right, var(--ActiveTitleStart), var(--ActiveTitleEnd)) !important;
+  }
+  &::after {
+    color: var(--ActiveTitleText);
+  }
+}

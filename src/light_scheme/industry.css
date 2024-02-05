@@ -11,10 +11,10 @@
   --ActiveTitleText: #ffffff;
   --InactiveTitleStart: #9ca4a5;
   --InactiveTitleEnd: #9ca4a5;
-  --InactiveTitleText: #ffffff;
+  --InactiveTitleText: #000000;
   --Selection: #212c2e;
   --SelectionText: #ffffff;
   --Tooltip: #ffffe1;
   --TooltipText: #000000;
-  --Scrollbar: #b7c7ca;
+  --Scrollbar: #dbe2e3;
 }

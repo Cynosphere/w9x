@@ -96,7 +96,7 @@
 
           & > [class^="textArea_"] {
             margin: 0;
-            height: unset;
+            height: 16px;
 
             & > [class^="goalTextContainer_"],
             & > [class^="progressFraction_"] {
