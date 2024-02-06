@@ -1,0 +1,291 @@
+[class^="app_"]:has([class^="characterBackground_"]) {
+  background-color: var(--Desktop);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+
+  & > [class^="characterBackground_"] {
+    & > [class^="artwork_"] {
+      display: none;
+    }
+
+    [class*="authBox_"] {
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+      width: 640px;
+
+      [class^="mainLoginContainer_"] {
+        width: 410px;
+        height: 203px;
+        background-color: var(--ThreeDFace);
+        box-shadow: var(--WindowFrame);
+        padding: 4px;
+        padding-top: 23px;
+        position: absolute;
+        left: 0;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 4px;
+          top: 4px;
+          width: calc(100% - 8px);
+          height: 18px;
+          background: linear-gradient(to right, var(--ActiveTitleStart), var(--ActiveTitleEnd)) !important;
+        }
+
+        &::after {
+          content: "Log On to Discord";
+          position: absolute;
+          left: 6px;
+          top: 4px;
+          color: var(--ActiveTitleText);
+          font-size: var(--FontSize);
+          font-weight: bold;
+          line-height: 18px;
+        }
+
+        & > [class^="header_"] {
+          background-image: var(--ImageBanner);
+          width: 410px;
+          height: 72px;
+          margin-bottom: 5px;
+          display: block;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 95px;
+            width: 410px;
+            height: 5px;
+            background-image: var(--ImageBannerBar);
+          }
+
+          & > * {
+            display: none;
+          }
+        }
+
+        div[class^="input_"] {
+          background: transparent;
+          border-radius: 0;
+        }
+
+        input {
+          border-radius: 0;
+          width: 240px;
+          height: 18px;
+          padding: 2px;
+          box-shadow: var(--InnerEdge);
+          background-color: var(--Window);
+          font-size: var(--FontSize);
+        }
+
+        label {
+          font-size: var(--FontSize);
+          text-transform: none;
+          font-weight: normal;
+          color: var(--WindowText);
+          margin: 0;
+          height: 20px;
+          width: 74px;
+          min-width: 74px;
+          letter-spacing: unset;
+          line-height: 20px;
+
+          & > span:not([class^="errorMessage_"]) {
+            display: none;
+          }
+        }
+
+        [class^="errorMessage_"] {
+          font-size: var(--FontSize);
+          position: absolute;
+          bottom: 44px;
+          left: 14px;
+
+          & > [class^="errorSeparator_"] {
+            display: none;
+          }
+        }
+
+        & > [class^="header_"] + div {
+          margin-top: 15px;
+          margin-left: 10px;
+
+          & > div[class^="marginBottom20_"] {
+            margin-bottom: 7px;
+            display: flex;
+
+            & > label {
+              font-size: 0 !important;
+
+              &::after {
+                font-size: var(--FontSize);
+                content: "User name:";
+              }
+            }
+
+            /* password */
+            & + div {
+              display: flex;
+
+              & > label::after {
+                content: ":";
+              }
+
+              /* forgot password */
+              & + button {
+                padding: 0;
+                margin: 0;
+                font-size: var(--FontSize);
+                border-radius: 0;
+                width: 75px;
+                height: 23px;
+                background-color: var(--ThreeDFace);
+                box-shadow: var(--OuterEdge);
+                color: var(--WindowText);
+                line-height: 19px;
+                position: absolute;
+                bottom: 14px;
+                right: 95px;
+
+                &:active {
+                  box-shadow: var(--InnerEdge);
+                }
+
+                & > [class^="contents_"] {
+                  font-size: 0 !important;
+                  background-image: none;
+
+                  &::after {
+                    font-size: var(--FontSize);
+                    line-height: 19px;
+                    height: 19px;
+                    display: inline-block;
+                    margin-top: 2px;
+                    content: "Recovery";
+                  }
+                }
+
+                /* login */
+                & + button {
+                  padding: 0;
+                  margin: 0;
+                  font-size: var(--FontSize);
+                  min-width: unset;
+                  min-height: unset;
+                  border-radius: 0;
+                  width: 75px;
+                  height: 23px;
+                  background-color: var(--ThreeDFace);
+                  box-shadow: var(--OuterEdge);
+                  color: var(--WindowText);
+                  line-height: 19px;
+                  position: absolute;
+                  bottom: 14px;
+                  right: 176px;
+
+                  &:active {
+                    box-shadow: var(--InnerEdge);
+                  }
+
+                  & > [class^="contents_"] {
+                    margin: 0;
+                  }
+
+                  /* register */
+                  & + div {
+                    margin: 0;
+
+                    & > span {
+                      display: none;
+                    }
+
+                    & > button {
+                      margin: 0;
+                      font-size: var(--FontSize);
+                      border-radius: 0;
+                      width: 75px;
+                      height: 23px;
+                      background-color: var(--ThreeDFace);
+                      box-shadow: var(--OuterEdge);
+                      color: var(--WindowText);
+                      line-height: 19px;
+                      position: absolute;
+                      bottom: 14px;
+                      right: 14px;
+
+                      &:active {
+                        box-shadow: var(--InnerEdge);
+                      }
+
+                      & > [class^="contents_"] {
+                        background-image: none;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      [class*="qrLogin_"] {
+        width: unset;
+        height: 203px;
+        background-color: var(--ThreeDFace);
+        box-shadow: var(--WindowFrame);
+        padding: 4px;
+        padding-top: 23px;
+        position: absolute;
+        right: 0;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 4px;
+          top: 4px;
+          width: calc(100% - 8px);
+          height: 18px;
+          background: linear-gradient(to right, var(--ActiveTitleStart), var(--ActiveTitleEnd)) !important;
+        }
+
+        &::after {
+          content: "QR Code Log On";
+          position: absolute;
+          left: 6px;
+          top: 4px;
+          color: var(--ActiveTitleText);
+          font-size: var(--FontSize);
+          font-weight: bold;
+          line-height: 18px;
+        }
+
+        [class^="measurementFill_"] {
+          width: unset;
+
+          [class^="qrLoginInner_"] {
+            & > :is(:not([class^="qrCodeContainer_"])) {
+              display: none;
+            }
+
+            [class^="qrCodeContainer_"] {
+              margin: 0 12px;
+            }
+          }
+        }
+      }
+
+      [class^="verticalSeparator_"] {
+        display: none;
+      }
+    }
+  }
+}

@@ -7,6 +7,21 @@
   }
 }
 
+body,
+#app-mount:empty {
+  background-color: var(--Desktop) !important;
+}
+
+[class^="notAppAsidePanel_"] > [class^="app_"]:has(> div[style]) {
+  background-color: var(--Desktop);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}
+
 [class^="app_"] + [class^="container_"] {
   padding: 0;
   z-index: 9999;
