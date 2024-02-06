@@ -1,0 +1,300 @@
+[data-list-id="chat-messages"]:has([class*="message_"][class*="cozy_"]) {
+  [class^="divider_"] {
+    top: 3px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  [class*="message_"][class*="cozy_"] {
+    padding: 0;
+    padding-left: 32px;
+    min-height: unset;
+
+    &[class*="groupStart_"] {
+      border-top: 1px solid var(--ThreeDLightShadow);
+      margin-top: 3px;
+      padding-top: 3px;
+      padding-right: 0 !important;
+    }
+
+    & > [class^="buttonContainer_"] {
+      display: none;
+    }
+
+    & > [class^="contents_"] {
+      & > [class^="avatar_"] {
+        left: 3px;
+        width: 26px;
+        height: 26px;
+        margin-top: 0;
+      }
+
+      & > [class^="avatarDecoration_"] {
+        left: 0px;
+        width: 32px;
+        height: 32px;
+        margin-top: -3px;
+      }
+
+      & > [class^="header_"] {
+        font-size: var(--FontSize);
+        line-height: 13px;
+        min-height: unset;
+        height: 13px;
+
+        [id^="message-username-"] {
+          height: 13px;
+          display: inline-block;
+
+          & > * {
+            top: 0;
+          }
+
+          [class^="username_"] {
+            display: inline-block;
+            font-size: var(--FontSize);
+            line-height: 13px;
+          }
+
+          [class^="roleIcon_"] {
+            width: 13px;
+            height: 13px;
+            top: 0;
+          }
+
+          :is(.platform-icons-wrapper, .roleTags-wrapper) > svg {
+            width: 13px;
+            height: 13px;
+            margin: 0 !important;
+          }
+        }
+
+        [class^="timestamp_"] {
+          position: absolute;
+          right: 0;
+        }
+      }
+
+      [class*="timestamp_"] {
+        font-size: var(--FontSize);
+        line-height: 13px;
+        height: unset;
+      }
+
+      & > [class^="markup_"] {
+        font-size: var(--FontSize);
+        line-height: 13px;
+
+        .emoji {
+          width: 13px;
+          height: 13px;
+          min-height: 13px;
+        }
+
+        .emoji.jumboable {
+          width: 20px;
+          height: 20px;
+          min-height: 20px;
+        }
+      }
+
+      [class*="timestampVisibleOnHover_"] {
+        margin: 0;
+        left: unset;
+        right: 0;
+      }
+    }
+
+    & > [id^="message-accessories-"] {
+      & > [class^="reactions_"] {
+        padding: 0;
+        margin: 0;
+
+        [class^="reaction_"] {
+          margin-bottom: 0;
+          border: none;
+          border-radius: 4px;
+          height: 13px;
+
+          & > [class^="reactionInner_"] {
+            padding: 0;
+
+            div:has(> .emoji) {
+              height: 13px;
+            }
+
+            .emoji {
+              margin: 0;
+              width: 13px;
+              height: 13px;
+              min-height: 13px;
+              display: block;
+            }
+
+            & > [class^="reactionCount_"] {
+              font-size: var(--FontSize);
+              padding: 0 7px;
+              margin: 0;
+              font-weight: normal;
+            }
+          }
+        }
+
+        [class^="reactionBtn_"] {
+          width: 13px;
+          height: 13px;
+          margin: 0;
+
+          & > svg {
+            width: 13px;
+            height: 13px;
+          }
+        }
+      }
+
+      [class^="embedWrapper_"] {
+        border-radius: 0;
+        padding: 5px;
+
+        [class^="grid_"] {
+          padding: 0;
+
+          .emoji {
+            width: 13px;
+            height: 13px;
+            min-height: 13px;
+          }
+
+          & > [class^="embedAuthor_"] {
+            margin: 0;
+            line-height: 13px;
+
+            & > [class^="embedAuthorIcon_"] {
+              width: 13px;
+              height: 13px;
+              margin-right: 4px;
+            }
+
+            & > [class*="embedAuthorName_"] {
+              font-size: var(--FontSize);
+            }
+          }
+
+          & > [class^="embedDescription_"] {
+            margin-top: 5px;
+            line-height: 13px;
+            font-size: var(--FontSize);
+          }
+
+          & > [class^="embedFields_"] {
+            margin-top: 5px;
+            line-height: 13px;
+
+            & > [class^="embedField_"] {
+              & > :is([class^="embedFieldName_"], [class^="embedFieldValue_"]) {
+                line-height: 13px;
+                font-size: var(--FontSize);
+              }
+            }
+          }
+
+          & > [class^="embedFooter_"] {
+            margin-top: 5px;
+            line-height: 13px;
+
+            & > [class^="embedFooterIcon_"] {
+              width: 13px;
+              height: 13px;
+              margin-right: 4px;
+            }
+
+            & > [class*="embedFooterText_"] {
+              font-size: var(--FontSize);
+              line-height: 13px;
+            }
+          }
+        }
+      }
+
+      [class^="mediaAttachmentsContainer_"] {
+        border-radius: 0;
+
+        & > div {
+          border-radius: 0;
+        }
+
+        [class^="messageAttachment_"] {
+          border-radius: 0;
+
+          [class^="imageWrapper_"] {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+
+    [class^="repliedMessage_"] {
+      font-size: var(--FontSize);
+      line-height: 13px;
+      margin: 0;
+      position: absolute;
+      top: 16px;
+
+      &::before {
+        margin: 0;
+        position: unset;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        border: none;
+        content: "> ";
+      }
+
+      & + [class^="contents_"] > [class^="header_"] {
+        margin-bottom: 13px;
+      }
+
+      & > [class^="replyAvatar_"] {
+        display: none;
+      }
+
+      & > [class^="username_"] {
+        display: inline-block;
+        font-size: var(--FontSize);
+        line-height: 13px;
+      }
+
+      :is(.platform-icons-wrapper, .roleTags-wrapper) {
+        margin-left: 0 !important;
+
+        & > svg {
+          width: 13px;
+          height: 13px;
+          margin: 0 !important;
+          margin: 0 !important;
+        }
+      }
+
+      & > [class^="repliedTextPreview_"] {
+        margin: 0;
+
+        .emoji {
+          width: 13px;
+          height: 13px;
+          min-height: 13px;
+        }
+      }
+      & > [class^="repliedTextContentIcon_"] {
+        margin-left: 2px;
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+}
+
+[class^="chat_"] [class^="messagesWrapper_"] [class^="scroller_"] [class^="scrollerContent_"] {
+  padding: 0 !important;
+  padding-bottom: 3px !important;
+}

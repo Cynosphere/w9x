@@ -1,0 +1,130 @@
+html:not(.a11y-font-scaled-down) [class*="message_"]:not([class*="systemMessage_"]):not([class*="compact_"]),
+html:not(.a11y-font-scaled-down) [class^="messagesWrapper_"] [class^="scrollerInner_"] > [class^="wrapper_"],
+html:not(.a11y-font-scaled-down)
+  [class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="container_"]:not([class*="systemMessage_"]):not([class*="compact_"]) {
+  padding: 0 !important;
+  padding-left: 8px !important;
+}
+
+[class*="message_"]:not([class*="systemMessage_"]):not([class*="compact_"]),
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="wrapper_"]:not([class*="systemMessage_"]):not([class*="compact_"]),
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="container_"]:not([class*="systemMessage_"]):not([class*="compact_"]) {
+  padding-left: 8px !important;
+}
+
+[class*="message_"][class*="systemMessage_"] {
+  padding-left: 28px !important;
+}
+
+[class*="message_"][class*="systemMessage_"] [class^="iconContainer_"] {
+  margin-right: 0;
+  width: 24px !important;
+}
+
+html:not(.a11y-font-scaled-down)
+  [class*="message_"]:not([class*="compact_"])
+  > [class^="contents_"]
+  > [class^="header_"],
+html:not(.a11y-font-scaled-down)
+  [class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="wrapper_"]:not([class*="compact_"])
+  > [class^="contents_"]
+  > [class^="header_"],
+html:not(.a11y-font-scaled-down)
+  [class*="message_"]:not([class*="compact_"])
+  > [class^="wrapper_"]
+  > [class^="contents_"]
+  > [class^="header_"] {
+  padding-left: 0 !important;
+  margin-left: 24px;
+  padding-bottom: 0 !important;
+}
+
+.a11y-font-scaled-down [class*="message_"]:not([class*="compact_"]) > [class^="contents_"] > [class^="header_"],
+.a11y-font-scaled-down
+  [class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="wrapper_"]:not([class*="compact_"])
+  > [class^="contents_"]
+  > [class^="header_"]
+  .a11y-font-scaled-down
+  [class*="message_"]:not([class*="compact_"])
+  > [class^="wrapper_"]
+  > [class^="contents_"]
+  > [class^="header_"] {
+  margin-left: calc(24px - 4.5rem);
+}
+
+[class*="message_"] > [class^="wrapper_"] > [class^="contents_"] [class^="avatar_"],
+[class^="messagesWrapper_"] [class^="scrollerInner_"] > [class^="wrapper_"] > [class^="contents_"] [class^="avatar_"],
+[class*="message_"] > [class^="contents_"] [class^="avatar_"] {
+  width: 20px;
+  height: 20px;
+  left: 8px;
+}
+
+[class*="message_"] > [class^="wrapper_"] > [class^="contents_"] [class^="avatar_"] {
+  left: 0 !important;
+}
+
+[class^="messagesWrapper_"] [class^="scrollerInner_"] > [class^="wrapper_"] > [class^="contents_"],
+[class*="message_"] > [class^="contents_"],
+[class*="message_"] > [class^="wrapper_"] > [class^="contents_"] {
+  margin-left: 0;
+  padding: 0;
+}
+
+[class*="message_"][class*="systemMessage_"] > [class^="container_"] {
+  padding: 0;
+}
+
+[class*="cozy_"][class*="hasThread_"]::after {
+  display: none;
+}
+
+[class*="message_"] > [class^="wrapper_"] {
+  padding-left: 0;
+}
+
+[class^="messagesWrapper_"] [class^="scrollerInner_"]:after {
+  height: 4px !important;
+}
+
+[class*="message_"]:not([class*="compact_"]) [class^="contents_"] [class*="timestampVisibleOnHover_"] {
+  display: none;
+}
+
+[class^="messagesWrapper_"] [class^="scrollerInner_"] [class^="divider_"] {
+  margin: 4px !important;
+  height: 8px;
+}
+
+[class^="messagesWrapper_"] [class^="scrollerInner_"] [class*="groupStart_"][class*="cozy_"] {
+  margin-top: 8px;
+}
+
+div[class*="cozyMessage_"] div[class^="repliedMessage_"] {
+  margin-left: 33px;
+}
+
+div[class*="cozyMessage_"] div[class^="repliedMessage_"]:before {
+  --avatar-size: 20px;
+  border-left: var(--spine-width) solid var(--interactive-active);
+  border-bottom: 0 solid var(--interactive-active);
+  border-right: 0 solid var(--interactive-active);
+  border-top: var(--spine-width) solid var(--interactive-active);
+}
+
+[class*="cozyMessage_"] [class^="avatarDecoration_"] {
+  margin-top: calc(24px - 20px * var(--decoration-to-avatar-ratio));
+  left: calc(30px - 20px * var(--decoration-to-avatar-ratio));
+  width: calc(20px * var(--decoration-to-avatar-ratio));
+  height: calc(20px * var(--decoration-to-avatar-ratio));
+}

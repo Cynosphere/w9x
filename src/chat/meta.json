@@ -1,0 +1,10 @@
+{
+  "name": "Chat Style",
+  "optional": true,
+  "optionalDefault": true,
+  "optionalName": "Default",
+  "optionNames": {
+    "cozy_compact": "Cozy Compact Hybrid",
+    "ripcord": "Ripcord"
+  }
+}
