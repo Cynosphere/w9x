@@ -1,3 +1,13 @@
+[data-list-id="chat-messages"] > [class*="groupStart_"] {
+  &:has(+ [class*="groupStart_"]),
+  &:has(+ [class^="divider_"]),
+  &:has(+ [class^="messageListItem_"] > [class*="groupStart_"]) {
+    & > [class^="messageListItem_"] > [class*="message_"] {
+      padding-bottom: 3px;
+    }
+  }
+}
+
 [class^="messageListItem_"]:has(> [class*="message_"][class*="cozy_"]) {
   & ~ [class^="divider_"] {
     top: 3px;
@@ -17,21 +27,53 @@
     margin: 0;
   }
 
+  &:has(+ [class*="groupStart_"]),
+  &:has(+ [class^="divider_"]),
+  &:has(+ [class^="messageListItem_"] > [class*="groupStart_"]) {
+    & > [class*="message_"] {
+      padding-bottom: 3px !important;
+    }
+  }
+
   [class*="message_"][class*="cozy_"] {
     padding: 0;
     padding-left: 32px;
     min-height: unset;
     color: var(--WindowText);
 
+    &:has(+ [class*="groupStart_"]) {
+      padding-bottom: 3px;
+    }
+
+    &[class*="hasThread_"]::after {
+      display: none;
+    }
+
     &[class*="groupStart_"] {
       border-top: 1px solid var(--ThreeDLightShadow);
-      margin-top: 3px;
+      margin: 0;
       padding-top: 3px;
       padding-right: 0 !important;
     }
 
     & > [class^="buttonContainer_"] {
-      display: none;
+      top: 16px;
+
+      & > [class^="buttons_"] {
+        padding: 0;
+        top: 0;
+
+        & > [class^="buttonsInner_"] {
+          height: 13px;
+          border-radius: 0;
+
+          & > [class^="button_"] {
+            padding: 0;
+            height: 13px;
+            min-width: 13px;
+          }
+        }
+      }
     }
 
     & > [class^="contents_"] {
@@ -171,7 +213,7 @@
 
             & > [class^="reactionCount_"] {
               font-size: var(--FontSize);
-              padding: 0 7px;
+              padding: 0 4px;
               margin: 0;
               font-weight: normal;
             }
@@ -418,6 +460,12 @@
         margin-left: 2px;
         width: 13px;
         height: 13px;
+      }
+
+      [class*="timestamp_"] {
+        font-size: 12px;
+        line-height: 13px;
+        height: unset;
       }
     }
   }
