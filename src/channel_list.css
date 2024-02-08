@@ -6,8 +6,6 @@
 
   & > [class^="container_"] {
     background: var(--Window) !important;
-    box-shadow: inset -1px -1px 0 0 var(--ThreeDHighlight), inset 1px 23px 0 0 var(--ThreeDShadow),
-      inset -2px -2px 0 0 var(--ThreeDLightShadow), inset 2px 24px 0 0 var(--ThreeDDarkShadow);
 
     & > [class^="container_"][class*="clickable_"] {
       background: var(--ThreeDFace) !important;
@@ -71,7 +69,6 @@
     }
 
     & > [class^="scroller_"] {
-      margin: 2px;
       & > [class^="content_"] {
         --channel-icon: var(--WindowText);
 

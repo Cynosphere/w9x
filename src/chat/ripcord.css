@@ -31,7 +31,12 @@
   &:has(+ [class^="divider_"]),
   &:has(+ [class^="messageListItem_"] > [class*="groupStart_"]) {
     & > [class*="message_"] {
-      padding-bottom: 3px !important;
+      margin-bottom: 3px !important;
+
+      &[class*="groupStart_"] {
+        margin-bottom: 0 !important;
+        padding-bottom: 3px !important;
+      }
     }
   }
 
@@ -40,10 +45,6 @@
     padding-left: 32px;
     min-height: unset;
     color: var(--WindowText);
-
-    &:has(+ [class*="groupStart_"]) {
-      padding-bottom: 3px;
-    }
 
     &[class*="hasThread_"]::after {
       display: none;
@@ -54,10 +55,14 @@
       margin: 0;
       padding-top: 3px;
       padding-right: 0 !important;
+
+      & > [class^="buttonContainer_"] {
+        top: 16px;
+      }
     }
 
     & > [class^="buttonContainer_"] {
-      top: 16px;
+      top: 0;
 
       & > [class^="buttons_"] {
         padding: 0;
@@ -77,6 +82,10 @@
     }
 
     & > [class^="contents_"] {
+      & > [class*="messageContent_"]:has(> [class^="attachment_"]) {
+        margin: 0;
+      }
+
       & > [class^="avatar_"] {
         left: 3px;
         width: 26px;
@@ -124,7 +133,11 @@
             top: 0;
           }
 
-          :is(.platform-icons-wrapper, .roleTags-wrapper) > svg {
+          .platform-icons-username {
+            margin-left: 2px;
+          }
+
+          :is(.platform-icons-wrapper, .roleTags-wrapper, [class^="newMemberBadge_"]) > svg {
             width: 13px;
             height: 13px;
             margin: 0 !important;
@@ -179,6 +192,7 @@
       }
 
       [class*="timestampVisibleOnHover_"] {
+        opacity: 1;
         margin: 0;
         left: unset;
         right: 0;
@@ -344,6 +358,7 @@
 
           & > [class*="embedThumbnail_"] {
             margin: 0;
+            margin-left: 5px;
 
             [class^="imageWrapper_"] {
               width: 64px !important;
@@ -399,6 +414,7 @@
       top: 16px;
       color: var(--WindowText);
       opacity: 0.64;
+      height: 13px !important;
 
       &::before {
         margin: 0;
@@ -418,7 +434,7 @@
         margin-bottom: 13px;
       }
 
-      & > [class^="replyAvatar_"] {
+      & > :is([class^="replyAvatar_"], [class^="executedCommandAvatar_"]) {
         display: none;
       }
 
@@ -444,6 +460,14 @@
           height: 13px;
           margin: 0 !important;
           margin: 0 !important;
+        }
+      }
+
+      &[class*="executedCommand_"] {
+        .platform-icons-username {
+          top: 0 !important;
+          margin-right: 0 !important;
+          margin-left: 2px !important;
         }
       }
 
@@ -476,7 +500,7 @@
     height: 13px;
     top: 0 !important;
     margin-top: 0 !important;
-    margin-left: 2px !important;
+    margin-left: 4px !important;
 
     [class*="botText_"] {
       display: inline-flex;
